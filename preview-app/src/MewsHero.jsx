@@ -964,10 +964,7 @@ export default function MewsAutomationHubHero() {
                 return (
                   <div
                     key={level}
-                    onClick={() => setActiveLevel(level)}
-                    style={{ flex: 1, textAlign: "center", cursor: "pointer", transition: "transform 0.2s" }}
-                    onMouseEnter={(e) => (e.currentTarget.style.transform = "translateY(-2px)")}
-                    onMouseLeave={(e) => (e.currentTarget.style.transform = "translateY(0)")}
+                    style={{ flex: 1, textAlign: "center" }}
                   >
                     <div style={{ fontSize: "0.8rem", fontWeight: 800, color: isActive ? color : T.textFaint, marginBottom: "8px", transition: "color 0.3s" }}>
                       {level}
