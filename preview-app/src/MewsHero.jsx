@@ -12,84 +12,338 @@ const COLORS = {
   cream: "#FFFCF6",
 };
 
-// Full Unfold plan automations
+// Full Unfold plan automations — tab field controls which tab each card appears on
 const unfoldAutomations = [
+  // ── Mar 3 – Mar 27 ──────────────────────────────────────────────────────────
   {
+    tab: "all",
     type: "product",
     title: "Allow hotels to activate pre-built automations instead of building from scratch.",
     goal: "Launch from prebuilt starters.",
     successCriteria: "Pilot-ready templates: Room Upgrades template exists, is editable, and can be published to a working flow on the demo property with minimal changes.",
     feature: "Templates",
     status: "ON TRACK",
-    progress: 60,
+    progress: 75,
     notes: "On schedule",
     url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas?selectedIssue=GEX-1020",
   },
   {
+    tab: "all",
     type: "product",
     title: "Allow hotels to see if automations ran and why they failed.",
     goal: "Provide enough visibility to debug runs and support operations.",
     successCriteria: "Pilot-ready logging: run list with filters (time/status/automation), run detail timeline with step outcomes + final status, and \"next step\" guidance from error_category/error_code for common failures.",
-    feature: "Minimum Logs + Critical alerting",
+    feature: "Minimum Logs",
     status: "ON TRACK",
-    progress: 40,
-    notes: "Design changes required re-adapting how we query AppMixer API, which slowed progress.",
+    progress: 50,
+    notes: "Design improvements required re-adapting how we query AppMixer API, which slowed progress.",
     url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas?selectedIssue=GEX-1021",
   },
   {
+    tab: "all",
     type: "product",
     title: "Allow hotels to automatically stop a failing automation and get a PMS alert to fix it.",
     goal: "Prevent silent failure cascades and protect hotel operations.",
     successCriteria: "Pilot-ready slice: system thresholds detect degraded runs, PMS shows a high-signal alert, breached thresholds auto-pause the flow, and the alert links to runs/logs with a clear remediation path.",
-    feature: "Minimum Logs + Critical alerting",
+    feature: "Critical alerting",
     status: "ON TRACK",
     progress: 5,
-    notes: "Initial discovery done, but no development started yet due to capacity.",
+    notes: "The key components have been identified and we have an overall view of what needs to be done. We now need to clarify the specifics and align on the execution plan of the notifications.",
     url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas?selectedIssue=GEX-1143",
   },
   {
+    tab: "all",
     type: "product",
     title: "Allow hotels to automatically upgrade loyal guests to a better room, with full control over inventory and limits.",
     goal: "Automate consistent upgrades with guardrails.",
-    successCriteria: "Pilot-ready end-to-end flow: publishable + runnable on demo property data, upgrades applied for eligible reservations, guardrails prevent inventory/conflict issues, and each run is traceable in logs (steps + outcome).",
-    feature: "Room Upgrades",
+    successCriteria: "Pilot-ready end-to-end flow: publishable + runnable on demo property data, upgrades applied for eligible reservations, guardrails prevent inventory/conflict issues, and each run is traceable in logs.",
+    feature: "Room upgrades",
     status: "ON TRACK",
-    progress: 70,
+    progress: 80,
     notes: "Missing notification component; doing quality refactors of the first components built.",
     url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas?selectedIssue=GEX-940",
   },
   {
-    type: "gtm",
-    title: "Define and lock pricing model for Automations before pilot launch.",
-    goal: "Enter pilot with a clear, defensible pricing structure.",
-    successCriteria: "Pricing model approved internally, documented, and communicated to pilot candidates — including per-automation pricing, bundling logic, and any pilot discounts.",
-    feature: "Pricing",
-    status: "ON TRACK",
-    progress: 55,
-    notes: "Internal alignment in progress; awaiting final sign-off.",
-    url: "https://mews.atlassian.net/wiki/spaces/GX/pages/1581023427/Mews+Automations+Go-to-Market+Rollout+Plan+for+Unfold+2026+Launch#7.Pricing-%26-Packaging-Options",
-  },
-  {
-    type: "gtm",
-    title: "Identify and confirm pilot property candidates for the Automations launch.",
-    goal: "Have 2–3 committed pilot properties ready before April.",
-    successCriteria: "At least 2 pilot properties identified, briefed, and confirmed — with a demo scheduled and a point of contact assigned for each.",
-    feature: "Pilot Candidates",
-    status: "ON TRACK",
-    progress: 40,
-    notes: "3 properties in conversation; 1 confirmed.",
-    url: "https://mews.atlassian.net/wiki/spaces/GX/pages/1581023427/Mews+Automations+Go-to-Market+Rollout+Plan+for+Unfold+2026+Launch#6.GTM-Workstreams",
-  },
-  {
-    type: "gtm",
-    title: "Lay the product marketing foundations for Automations ahead of Unfold.",
-    goal: "Have messaging, positioning, and core assets ready for pilot and Unfold announcement.",
-    successCriteria: "Positioning doc, one-pager, and demo script completed and reviewed — ready to support pilot conversations and the Unfold announcement.",
-    feature: "Product Marketing",
+    tab: "all",
+    type: "product",
+    title: "Automation Hub Services production-ready",
+    goal: "Harden the Automation Hub Service (AHS) and Gateway for production-readiness — security, scaling, environment separation, CI/CD pipeline, observability, and resilience.",
+    successCriteria: null,
+    feature: "Production-ready",
     status: "ON TRACK",
     progress: 25,
-    notes: "Positioning in draft; one-pager not started.",
+    notes: null,
+  },
+  {
+    tab: "all",
+    type: "gtm",
+    title: "Finalize pricing model",
+    goal: "Select from 5 evaluated models (recommended: Atlassian-inspired product-linked pricing). Align with Commercial & Finance. Decision required by end of Cycle 2.",
+    successCriteria: "Pricing decision made, communicated internally to Sales & CS, pilot pricing terms agreed.",
+    feature: "Pricing",
+    status: "ON TRACK",
+    progress: 90,
+    notes: "We will enable Automations for everyone who has the Advanced Guest Experience module/package (for existing contracts).",
+    url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas?selectedIssue=GEX-1164",
+    url2: "https://mews.atlassian.net/wiki/spaces/GX/pages/1581023427/Mews+Automations+Go-to-Market+Rollout+Plan+for+Unfold+2026+Launch#7.Pricing-%26-Packaging-Options",
+  },
+  {
+    tab: "all",
+    type: "gtm",
+    title: "Identify pilot candidates and start onboarding",
+    goal: "Pipeline for pilot.",
+    successCriteria: "Ideal pilot customer criteria defined. Shortlist of ≥ 10 prospects agreed with Sales.",
+    feature: "Pilots",
+    status: "DONE",
+    progress: 100,
+    notes: "Pilot shortlisting and onboarding have been completed. Strawberry is ready for piloting in the demo environment.",
+    url: "https://mews.atlassian.net/wiki/spaces/GX/pages/1581023427/Mews+Automations+Go-to-Market+Rollout+Plan+for+Unfold+2026+Launch#14.Pilot-Customer-Onboarding-Template",
+  },
+  {
+    tab: "all",
+    type: "gtm",
+    title: "Product Marketing messaging hierarchy",
+    goal: "Establish core positioning and competitive narrative.",
+    successCriteria: "1-page product brief (internal), customer-facing overview page drafted, competitive battle card (vs Akia, Zapier, Opera automation), press release draft reviewed.",
+    feature: "Marketing Assets",
+    status: "ON TRACK",
+    progress: 30,
+    notes: null,
     url: "https://mews.atlassian.net/wiki/spaces/GX/pages/1581023427/Mews+Automations+Go-to-Market+Rollout+Plan+for+Unfold+2026+Launch#6.GTM-Workstreams",
+  },
+
+  // ── Mar 27 – Apr 30 ─────────────────────────────────────────────────────────
+  {
+    tab: "revenue",
+    type: "product",
+    title: "Allow hotels to automatically recognize loyal guests with a personalized welcome gift on arrival.",
+    goal: "Automatically create a staff task to deliver a personalized welcome gift to loyal guests.",
+    successCriteria: "Pilot-ready end-to-end flow: publishable + runnable on property data.",
+    feature: "Amenity gift",
+    status: "NOT STARTED",
+    progress: 0,
+    notes: "Evaluating going with smart tips engine vs our own agent",
+    url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas?selectedIssue=GEX-950",
+  },
+  {
+    tab: "revenue",
+    type: "product",
+    title: "Allow hotels to automatically reward loyal guests with a spending allowance on arrival.",
+    goal: "Automatically issue a per-stay or per-day spending allowance to eligible loyalty guests.",
+    successCriteria: "Pilot-ready end-to-end flow: publishable + runnable on property data.",
+    feature: "Allowances",
+    status: "BLOCKED",
+    progress: 0,
+    notes: "The Allowance PMS feature is still in its early stages, so we will wait to integrate it once it's ready for general availability (GA).",
+    url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas?selectedIssue=GEX-1007",
+  },
+  {
+    tab: "revenue",
+    type: "product",
+    title: "Allow hotels without loyalty programs to offer soft benefits automations",
+    goal: "Automatically identify loyal guests using soft behavioral signals and trigger benefit automations, without requiring a formal loyalty program.",
+    successCriteria: "Pilot-ready end-to-end flow: publishable + runnable on property data.",
+    feature: "Behavioral signals",
+    status: "NOT STARTED",
+    progress: 0,
+    notes: null,
+    url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas?selectedIssue=GEX-1160",
+  },
+  {
+    tab: "revenue",
+    type: "product",
+    title: "Enable hotels to send messages directly to their guests.",
+    goal: "Enable SMS/WhatsApp as an action step inside any automation flow.",
+    successCriteria: "\"Send message to guest\" action available in the Workflow Creator, working with Comms Hub templates.",
+    feature: "Comms Hub integration",
+    status: "NOT STARTED",
+    progress: 0,
+    notes: "Comms Hub not available for an integration.",
+    url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas?selectedIssue=GEX-1167",
+  },
+  {
+    tab: "revenue",
+    type: "product",
+    title: "Resilience – Rate Limiting",
+    goal: "Implement rate limiting across the AH to ensure fair usage, prevent misuse, and protect platform performance at scale.",
+    successCriteria: "Rate limits enforced per customer and/or per plan tier consistently across all platform entry points.",
+    feature: "Rate Limiting",
+    status: "NOT STARTED",
+    progress: 0,
+    notes: null,
+  },
+  {
+    tab: "revenue",
+    type: "product",
+    title: "Resilience – Availability",
+    goal: "Ensure the AH stays operational when AppMixer is down, with a clear contingency plan that minimises customer impact.",
+    successCriteria: "Documented contingency plan, customers informed when automations are affected, failed automations recoverable once library is back.",
+    feature: "Availability",
+    status: "NOT STARTED",
+    progress: 0,
+    notes: null,
+  },
+  {
+    tab: "revenue",
+    type: "gtm",
+    title: "Pilot customers onboarded (≥ 2 properties by Unfold)",
+    goal: "Managed pilot with real properties running live flows.",
+    successCriteria: "≥ 2 properties onboarded with CS-led kickoff, first flow live per property, health check cadence running, escalation path defined.",
+    feature: "Production Pilot",
+    status: "NOT STARTED",
+    progress: 0,
+    notes: null,
+  },
+  {
+    tab: "revenue",
+    type: "gtm",
+    title: "Success Metrics & KPIs",
+    goal: "Instrument KPIs before pilot launch.",
+    successCriteria: "Product instrumentation to track KPIs in place before Cycle 3 ends.",
+    feature: "Pre-Unfold (Pilot Phase)",
+    status: "NOT STARTED",
+    progress: 0,
+    notes: null,
+    url: "https://mews.atlassian.net/wiki/spaces/GX/pages/1581023427/Mews+Automations+Go-to-Market+Rollout+Plan+for+Unfold+2026+Launch#8.Success-Metrics-%26-KPIs",
+  },
+
+  // ── May 1 – May 27 Unfold ───────────────────────────────────────────────────
+  {
+    tab: "loyalty",
+    type: "product",
+    title: "End-to-end testing of the UNFOLD experience to validate stability, usability, and operational readiness.",
+    goal: "Systematically test key flows, configurations, and edge cases to ensure the product works reliably before UNFOLD.",
+    successCriteria: "All critical flows validated, major issues identified and resolved, and a stable version ready for live demonstration and pilot use.",
+    feature: "Testing",
+    status: "NOT STARTED",
+    progress: 0,
+    notes: null,
+    url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas?selectedIssue=GEX-1165",
+  },
+  {
+    tab: "loyalty",
+    type: "gtm",
+    title: "Onboarding playbook, quick-start guide & Help Centre",
+    goal: "Fast time-to-first-value for pilot customers.",
+    successCriteria: "Pilot onboarding playbook, 1–2 page admin guide, recipe cards for templates, Help Centre getting-started article, video walkthrough (5–10 min), escalation route defined.",
+    feature: "Playbook",
+    status: "NOT STARTED",
+    progress: 0,
+    notes: "Template: 20–40 min setup · Custom: 1–3 hours · Must be ready before pilot kick-off",
+    url: "https://mews.atlassian.net/wiki/spaces/GX/pages/1581023427/Mews+Automations+Go-to-Market+Rollout+Plan+for+Unfold+2026+Launch#11.Onboarding-%26-Setup",
+  },
+  {
+    tab: "loyalty",
+    type: "gtm",
+    title: "Begin Sales & CS enablement",
+    goal: "Equip Sales and CS for pilot conversations.",
+    successCriteria: "Sales pitch deck built, objection-handling guide (vs. Akia/Zapier) complete, internal Sales training run. CS lead assigned for pilot.",
+    feature: "Enablement",
+    status: "NOT STARTED",
+    progress: 0,
+    notes: "Enablement training request for Sales and CS has been submitted.",
+    url: "https://mews.atlassian.net/wiki/spaces/GX/pages/1581023427/Mews+Automations+Go-to-Market+Rollout+Plan+for+Unfold+2026+Launch#6.GTM-Workstreams",
+  },
+  {
+    tab: "loyalty",
+    type: "gtm",
+    title: "Press release drafted & Unfold session narrative",
+    goal: "Launch content ready for Unfold.",
+    successCriteria: "\"Mews Launches Automation Hub\" press release approved (PMM + Comms). Unfold main-stage demo script complete. Customer video/demo reel produced.",
+    feature: "Unfold Assets",
+    status: "NOT STARTED",
+    progress: 0,
+    notes: "6–8 week lead time — must start early Cycle 3. Already working on Unfold session narrative — it's going to be Pepa's keynote.",
+    url: "https://mews.atlassian.net/wiki/spaces/GX/pages/1581023427/Mews+Automations+Go-to-Market+Rollout+Plan+for+Unfold+2026+Launch#6.GTM-Workstreams",
+  },
+  {
+    tab: "loyalty",
+    type: "gtm",
+    title: "Mews University: Automation Hub Module",
+    goal: "Deliver structured education to drive sustainable adoption and reduce CS/support load.",
+    successCriteria: "Modules 1–4 live on Mews University before Unfold (22 May). Module 6 (internal CS/Support depth) delivered before pilot launch.",
+    feature: "Enablement",
+    status: "NOT STARTED",
+    progress: 0,
+    notes: "PMM (content) + CS lead (review) + SA (Module 5)",
+    url: "https://mews.atlassian.net/wiki/spaces/GX/pages/1581023427/Mews+Automations+Go-to-Market+Rollout+Plan+for+Unfold+2026+Launch#6.GTM-Workstreams",
+    url2: "https://mews.atlassian.net/jira/polaris/projects/AN/ideas?selectedIssue=AN-1133",
+  },
+  {
+    tab: "loyalty",
+    type: "gtm",
+    title: "Unfold Automations Video",
+    goal: "Create a competitive narrative. One video ready for Unfold showing the benefits of the product.",
+    successCriteria: null,
+    feature: "Unfold Assets",
+    status: "NOT STARTED",
+    progress: 0,
+    notes: null,
+    url: "https://mews.atlassian.net/wiki/spaces/GX/pages/1581023427/Mews+Automations+Go-to-Market+Rollout+Plan+for+Unfold+2026+Launch#6.GTM-Workstreams",
+  },
+
+  // ── May 28 – Jun 30 ─────────────────────────────────────────────────────────
+  {
+    tab: "efficiency",
+    type: "gtm",
+    title: "Sales deck finalized & all AEs trained",
+    goal: "100% of qualified prospects see a live demo.",
+    successCriteria: "Sales pitch deck complete (discovery → demo → close), objection-handling guide finalized, 100% of AEs trained.",
+    feature: "Enablement",
+    status: "NOT STARTED",
+    progress: 0,
+    notes: "Depends on pricing decision from Cycle 2",
+    url: "https://mews.atlassian.net/wiki/spaces/GX/pages/1581023427/Mews+Automations+Go-to-Market+Rollout+Plan+for+Unfold+2026+Launch#6.GTM-Workstreams",
+  },
+  {
+    tab: "efficiency",
+    type: "gtm",
+    title: "Post-Unfold awareness campaign (Apr–May)",
+    goal: "Build demand ahead of Unfold.",
+    successCriteria: "Teaser content on socials, thought-leadership blog post, Community \"Coming Soon\" post, segmented email to existing customers, partner brief to Marketplace partners.",
+    feature: "Marketing Assets",
+    status: "NOT STARTED",
+    progress: 0,
+    notes: "PMM + CRM ownership — feeds into Unfold launch activation",
+    url: "https://mews.atlassian.net/wiki/spaces/GX/pages/1581023427/Mews+Automations+Go-to-Market+Rollout+Plan+for+Unfold+2026+Launch#6.GTM-Workstreams",
+  },
+
+  // ── Jul 1 – Sep 30 ──────────────────────────────────────────────────────────
+  {
+    tab: "q3",
+    type: "product",
+    title: "Allow hotels without loyalty programs to create a lightweight, automated loyalty tier system using behavioral data Mews already captures.",
+    goal: "Automatically assign and update guest loyalty tiers based on stay count, revenue, and recency — no external system required.",
+    successCriteria: "Pilot-ready end-to-end flow: publishable + runnable on property data.",
+    feature: "Tier Automator",
+    status: "NOT STARTED",
+    progress: 0,
+    notes: null,
+    url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas?selectedIssue=GEX-1166",
+  },
+  {
+    tab: "q3",
+    type: "product",
+    title: "Allow hotels to automatically recognize reservations eligible for early check-in based on availability and predefined conditions.",
+    goal: "Automatically enable early check-in for eligible reservations without requiring staff intervention.",
+    successCriteria: "Pilot-ready end-to-end flow: publishable + runnable on property data.",
+    feature: "Early Check-In",
+    status: "NOT STARTED",
+    progress: 0,
+    notes: null,
+    url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas?selectedIssue=GEX-943",
+  },
+  {
+    tab: "q3",
+    type: "product",
+    title: "Allow hotels to automatically recognize reservations eligible for late check-out based on availability and predefined conditions.",
+    goal: "Automatically enable late check-out for eligible reservations without requiring staff intervention.",
+    successCriteria: "Pilot-ready end-to-end flow: publishable + runnable on property data.",
+    feature: "Late Check-Out",
+    status: "NOT STARTED",
+    progress: 0,
+    notes: null,
+    url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas?selectedIssue=GEX-1168",
   },
 ];
 
@@ -102,7 +356,7 @@ const emergencyIncluded = [
     successCriteria: "Pilot-ready templates: Room Upgrades template exists, is editable, and can be published to a working flow on the demo property with minimal changes.",
     feature: "Templates",
     status: "ON TRACK",
-    progress: 60,
+    progress: 75,
     notes: "On schedule",
     url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas?selectedIssue=GEX-1020",
   },
@@ -113,8 +367,8 @@ const emergencyIncluded = [
     successCriteria: "Pilot-ready logging: run list with filters (time/status/automation), run detail timeline with step outcomes + final status, and \"next step\" guidance from error_category/error_code for common failures.",
     feature: "Minimum Logs + Critical alerting",
     status: "ON TRACK",
-    progress: 40,
-    notes: "Design changes required re-adapting how we query AppMixer API, which slowed progress.",
+    progress: 50,
+    notes: "Design improvements required re-adapting how we query AppMixer API, which slowed progress initially but is now under control.",
     url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas?selectedIssue=GEX-1021",
   },
   {
@@ -125,7 +379,7 @@ const emergencyIncluded = [
     feature: "Minimum Logs + Critical alerting",
     status: "ON TRACK",
     progress: 5,
-    notes: "Initial discovery done, but no development started yet due to capacity.",
+    notes: "The key components have been identified. Need to clarify specifics and align on execution plan before development starts.",
     url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas?selectedIssue=GEX-1143",
   },
   {
@@ -135,8 +389,8 @@ const emergencyIncluded = [
     successCriteria: "Pilot-ready end-to-end flow: publishable + runnable on demo property data, upgrades applied for eligible reservations, guardrails prevent inventory/conflict issues, and each run is traceable in logs (steps + outcome).",
     feature: "Room Upgrades",
     status: "ON TRACK",
-    progress: 70,
-    notes: "Missing notification component; doing quality refactors of the first components built.",
+    progress: 80,
+    notes: "Missing notification component; doing quality refactors.",
     url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas?selectedIssue=GEX-940",
   },
   {
@@ -261,13 +515,14 @@ function AutomationCard({ item, index, T }) {
   const bgAccentColor = item.type === "product" ? COLORS.pink : COLORS.chartreuse;
 
   const statusColor =
-    item.status === "ON TRACK" ? T.statusOnTrack :
+    item.status === "ON TRACK"    ? T.statusOnTrack :
+    item.status === "DONE"        ? T.statusOnTrack :
     item.status === "NOT STARTED" ? T.textFaint :
-    T.accentOrange;
+    T.accentOrange; // BLOCKED, DECISION NEEDED, etc.
 
   const statusLabel =
     item.status === "not-included" ? "Not included" :
-    item.status === "next-sprint" ? "Next sprint" :
+    item.status === "next-sprint"  ? "Next sprint" :
     item.status;
 
   const statusBadgeColor =
@@ -402,6 +657,30 @@ function AutomationCard({ item, index, T }) {
             {item.url.includes("jira") ? "↗ Jira" : "↗ Confluence"}
           </a>
         )}
+        {item.url2 && (
+          <a
+            href={item.url2}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "5px",
+              fontSize: "0.7rem",
+              fontWeight: 600,
+              color: dimmed ? T.textGhost : accentColor,
+              textDecoration: "none",
+              opacity: dimmed ? 0.4 : 0.7,
+              transition: "opacity 0.2s",
+              marginTop: "2px",
+              marginLeft: "8px",
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.opacity = "1")}
+            onMouseLeave={(e) => (e.currentTarget.style.opacity = dimmed ? "0.4" : "0.7")}
+          >
+            {item.url2.includes("jira") ? "↗ Jira" : "↗ Confluence"}
+          </a>
+        )}
       </div>
     </div>
   );
@@ -482,11 +761,11 @@ function GoalBlock({ label, value, color, T }) {
 }
 
 const tabs = [
-  { key: "all",        label: "Mar 3 – Mar 27",        product: "Pilot with a Property on Demo + Moderated User Testing",                     gtm: "Finalize pricing, identify pilot candidates & lay product marketing foundations" },
-  { key: "revenue",    label: "Mar 27 – Apr 30",       product: "TBD", gtm: "TBD" },
-  { key: "loyalty",    label: "May 1 – May 27 Unfold", product: "TBD", gtm: "TBD" },
-  { key: "efficiency", label: "May 28 – Jun 30",       product: "TBD", gtm: "TBD" },
-  { key: "q3",         label: "Jul 1 – Sep 30",        product: "TBD", gtm: "TBD" },
+  { key: "all",        label: "Mar 3 – Mar 27",        product: "Pilot with a Property on Demo + Moderated User Testing",                           gtm: "Finalize pricing, identify pilot candidates & lay product marketing foundations" },
+  { key: "revenue",    label: "Mar 27 – Apr 30",       product: "Launch extended loyalty automations — welcome gift, allowances, soft signals",       gtm: "Onboard ≥ 2 pilot properties and instrument success metrics" },
+  { key: "loyalty",    label: "May 1 – May 27 Unfold", product: "End-to-end tested and stable for live demonstration at Unfold",                     gtm: "Sales, CS, and marketing assets ready for Unfold launch" },
+  { key: "efficiency", label: "May 28 – Jun 30",       product: "TBD",                                                                               gtm: "Full sales team enabled and post-Unfold awareness campaign live" },
+  { key: "q3",         label: "Jul 1 – Sep 30",        product: "Launch tier automator, early and late check-out automations",                        gtm: "TBD" },
 ];
 
 export default function MewsAutomationHubHero() {
@@ -796,7 +1075,7 @@ export default function MewsAutomationHubHero() {
         {/* Cards — Unfold plan */}
         {activePlan === "unfold" && (
           <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "24px" }} key={activeTab + "-unfold"}>
-            {unfoldAutomations.map((item, i) => (
+            {unfoldAutomations.filter(item => item.tab === activeTab).map((item, i) => (
               <AutomationCard key={item.title} item={item} index={i} T={T} />
             ))}
           </div>
