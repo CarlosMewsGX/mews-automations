@@ -634,52 +634,53 @@ function AutomationCard({ item, index, T }) {
             <>{item.progress > 0 ? " · " : ""}{item.notes}</>
           )}
         </div>
-        {item.url && (
-          <a
-            href={item.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "5px",
-              fontSize: "0.7rem",
-              fontWeight: 600,
-              color: dimmed ? T.textGhost : accentColor,
-              textDecoration: "none",
-              opacity: dimmed ? 0.4 : 0.7,
-              transition: "opacity 0.2s",
-              marginTop: "2px",
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.opacity = "1")}
-            onMouseLeave={(e) => (e.currentTarget.style.opacity = dimmed ? "0.4" : "0.7")}
-          >
-            {item.url.includes("jira") ? "↗ Jira" : "↗ Confluence"}
-          </a>
-        )}
-        {item.url2 && (
-          <a
-            href={item.url2}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "5px",
-              fontSize: "0.7rem",
-              fontWeight: 600,
-              color: dimmed ? T.textGhost : accentColor,
-              textDecoration: "none",
-              opacity: dimmed ? 0.4 : 0.7,
-              transition: "opacity 0.2s",
-              marginTop: "2px",
-              marginLeft: "8px",
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.opacity = "1")}
-            onMouseLeave={(e) => (e.currentTarget.style.opacity = dimmed ? "0.4" : "0.7")}
-          >
-            {item.url2.includes("jira") ? "↗ Jira" : "↗ Confluence"}
-          </a>
+        {(item.url || item.url2) && (
+          <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
+            {item.url && (
+              <a
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "5px",
+                  fontSize: "0.7rem",
+                  fontWeight: 600,
+                  color: dimmed ? T.textGhost : accentColor,
+                  textDecoration: "none",
+                  opacity: dimmed ? 0.4 : 0.7,
+                  transition: "opacity 0.2s",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.opacity = "1")}
+                onMouseLeave={(e) => (e.currentTarget.style.opacity = dimmed ? "0.4" : "0.7")}
+              >
+                {item.url.includes("jira") ? "↗ Jira" : "↗ Confluence"}
+              </a>
+            )}
+            {item.url2 && (
+              <a
+                href={item.url2}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "5px",
+                  fontSize: "0.7rem",
+                  fontWeight: 600,
+                  color: dimmed ? T.textGhost : accentColor,
+                  textDecoration: "none",
+                  opacity: dimmed ? 0.4 : 0.7,
+                  transition: "opacity 0.2s",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.opacity = "1")}
+                onMouseLeave={(e) => (e.currentTarget.style.opacity = dimmed ? "0.4" : "0.7")}
+              >
+                {item.url2.includes("jira") ? "↗ Jira" : "↗ Confluence"}
+              </a>
+            )}
+          </div>
         )}
       </div>
     </div>
