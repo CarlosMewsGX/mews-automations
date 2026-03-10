@@ -1,4 +1,5 @@
 import { useState } from "react";
+import CardComments from "./CardComments";
 
 const COLORS = {
   pink: "#FF8EDA",
@@ -530,6 +531,8 @@ function AutomationCard({ item, index, T }) {
     item.status === "NOT STARTED" ? T.textFaint :
     statusColor;
 
+  const cardId = item.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").slice(0, 60);
+
   return (
     <div
       onMouseEnter={() => !dimmed && setHovered(true)}
@@ -543,8 +546,8 @@ function AutomationCard({ item, index, T }) {
         borderRadius: "16px",
         padding: "24px 28px",
         display: "flex",
-        flexDirection: "row",
-        gap: "28px",
+        flexDirection: "column",
+        gap: "0",
         cursor: "default",
         border: `1px solid ${dimmed ? T.borderFaint : hovered ? bgAccentColor + "55" : T.borderSubtle}`,
         transition: "all 0.4s cubic-bezier(0.22, 1, 0.36, 1)",
@@ -554,6 +557,8 @@ function AutomationCard({ item, index, T }) {
         animation: `fadeSlideUp 0.7s ${0.3 + index * 0.08}s forwards`,
       }}
     >
+      {/* Two-column row: Initiative + Progress */}
+      <div style={{ display: "flex", flexDirection: "row", gap: "28px" }}>
       {/* Left: Initiative */}
       <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: "12px" }}>
         <div>
@@ -683,6 +688,10 @@ function AutomationCard({ item, index, T }) {
           </div>
         )}
       </div>
+      </div>{/* end two-column row */}
+
+      {/* Comments — full width below */}
+      <CardComments cardId={cardId} T={T} accentColor={accentColor} />
     </div>
   );
 }
