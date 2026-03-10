@@ -123,16 +123,15 @@ export default function CardComments({ cardId, T, accentColor }) {
               disabled={!name.trim() || !text.trim() || submitting}
               style={{
                 alignSelf: "flex-start",
-                background: accentColor + "22",
-                border: `1px solid ${accentColor}44`,
+                background: !name.trim() || !text.trim() || submitting ? "#333" : accentColor,
+                border: "none",
                 borderRadius: "8px",
-                padding: "7px 16px",
-                fontSize: "0.75rem",
+                padding: "9px 20px",
+                fontSize: "0.78rem",
                 fontWeight: 700,
-                color: accentColor,
+                color: !name.trim() || !text.trim() || submitting ? "#666" : "#000",
                 cursor: !name.trim() || !text.trim() || submitting ? "not-allowed" : "pointer",
-                opacity: !name.trim() || !text.trim() || submitting ? 0.4 : 1,
-                transition: "opacity 0.2s",
+                transition: "background 0.2s, color 0.2s",
               }}
             >
               {submitting ? "Posting…" : "Post comment"}
