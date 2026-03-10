@@ -71,7 +71,7 @@ const unfoldAutomations = [
     successCriteria: null,
     feature: "Production-ready",
     status: "ON TRACK",
-    progress: 25,
+    progress: 40,
     notes: null,
   },
   {
@@ -400,8 +400,8 @@ const emergencyIncluded = [
     successCriteria: "AHS and Gateway meet production standards: security hardened, environments separated, CI/CD pipeline in place, observability instrumented, and resilience patterns applied.",
     feature: "Services production-ready",
     status: "ON TRACK",
-    progress: 20,
-    notes: "20% complete",
+    progress: 40,
+    notes: null,
   },
   {
     type: "product",
