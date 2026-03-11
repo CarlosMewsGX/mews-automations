@@ -37,7 +37,7 @@ const unfoldAutomations = [
     feature: "Minimum Logs",
     status: "ON TRACK",
     progress: 50,
-    notes: "Design improvements required re-adapting how we query AppMixer API, which slowed progress.",
+    notes: "Delivery is progressing smoothly, we just need to refine one final piece of the logs",
     url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas?selectedIssue=GEX-1021",
   },
   {
@@ -369,7 +369,7 @@ const emergencyIncluded = [
     feature: "Minimum Logs + Critical alerting",
     status: "ON TRACK",
     progress: 50,
-    notes: "Design improvements required re-adapting how we query AppMixer API, which slowed progress initially but is now under control.",
+    notes: "Delivery is progressing smoothly, we just need to refine one final piece of the logs",
     url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas?selectedIssue=GEX-1021",
   },
   {
