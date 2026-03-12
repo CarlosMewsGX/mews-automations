@@ -13,7 +13,6 @@ export default function CardComments({ cardId, T, accentColor }) {
   const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
-    if (!open) return;
     const q = query(
       collection(db, "comments", cardId, "messages"),
       orderBy("createdAt", "asc")
@@ -21,7 +20,7 @@ export default function CardComments({ cardId, T, accentColor }) {
     return onSnapshot(q, (snap) =>
       setComments(snap.docs.map((d) => ({ id: d.id, ...d.data() })))
     );
-  }, [open, cardId]);
+  }, [cardId]);
 
   async function submit(e) {
     e.preventDefault();

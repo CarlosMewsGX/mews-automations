@@ -3,7 +3,9 @@
     "allow": [
       "Bash(npm install)",
       "mcp__Claude_Preview__preview_start",
-      "Bash(npm install firebase)"
+      "Bash(npm install firebase)",
+      "Bash(command -v npm)",
+      "Read(//usr/local/**)"
     ]
   }
 }
