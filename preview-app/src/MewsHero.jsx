@@ -36,8 +36,8 @@ const unfoldAutomations = [
     successCriteria: "Pilot-ready logging: run list with filters (time/status/automation), run detail timeline with step outcomes + final status, and \"next step\" guidance from error_category/error_code for common failures.",
     feature: "Minimum Logs",
     status: "ON TRACK",
-    progress: 50,
-    notes: "Delivery is progressing smoothly, we just need to refine one final piece of the logs",
+    progress: 65,
+    notes: "Delivery is progressing smoothly, we expect to end the week with 80% of what we committed to",
     url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas?selectedIssue=GEX-1021",
   },
   {
@@ -368,8 +368,8 @@ const emergencyIncluded = [
     successCriteria: "Pilot-ready logging: run list with filters (time/status/automation), run detail timeline with step outcomes + final status, and \"next step\" guidance from error_category/error_code for common failures.",
     feature: "Minimum Logs + Critical alerting",
     status: "ON TRACK",
-    progress: 50,
-    notes: "Delivery is progressing smoothly, we just need to refine one final piece of the logs",
+    progress: 65,
+    notes: "Delivery is progressing smoothly, we expect to end the week with 80% of what we committed to",
     url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas?selectedIssue=GEX-1021",
   },
   {
