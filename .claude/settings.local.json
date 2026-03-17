@@ -5,7 +5,11 @@
       "mcp__Claude_Preview__preview_start",
       "Bash(npm install firebase)",
       "Bash(command -v npm)",
-      "Read(//usr/local/**)"
+      "Read(//usr/local/**)",
+      "Bash(/opt/homebrew/Cellar/node@24/24.14.0/bin/node delete-comments.mjs)",
+      "Bash(curl -s \"https://firestore.googleapis.com/v1/projects/automations-6fa65/databases/\\(default\\)/documents/comments?key=AIzaSyBmJKl6TqUpCfvUlJ2F-_3OFyYBNHZ9z_Y\")",
+      "Bash(/opt/homebrew/Cellar/node@24/24.14.0/bin/node -e \"const d=require\\(''fs''\\).readFileSync\\(''/dev/stdin'',''utf8''\\); const j=JSON.parse\\(d\\); \\(j.documents||[]\\).forEach\\(doc=>console.log\\(doc.name\\)\\)\")",
+      "Bash(curl -s -X DELETE \"https://firestore.googleapis.com/v1/projects/automations-6fa65/databases/\\(default\\)/documents/comments/allow-hotels-to-activate-pre-built-automations-instead-of-bu/messages/fv9uwCu8g6OIZ2L4lLF9?key=AIzaSyBmJKl6TqUpCfvUlJ2F-_3OFyYBNHZ9z_Y\")"
     ]
   }
 }
