@@ -97,7 +97,7 @@ const unfoldAutomations = [
     feature: "Pilots",
     status: "DONE",
     progress: 100,
-    notes: "Pilot shortlisting and onboarding have been completed. Strawberry is ready for piloting in the demo environment.",
+    notes: "Pilot shortlisting and onboarding have been completed. Strawberry starts Pilot Friday the 20th.",
     url: "https://mews.atlassian.net/wiki/spaces/GX/pages/1581023427/Mews+Automations+Go-to-Market+Rollout+Plan+for+Unfold+2026+Launch#14.Pilot-Customer-Onboarding-Template",
   },
   {
@@ -108,8 +108,8 @@ const unfoldAutomations = [
     successCriteria: "1-page product brief (internal), customer-facing overview page drafted, competitive battle card (vs Akia, Zapier, Opera automation), press release draft reviewed.",
     feature: "Marketing Assets",
     status: "ON TRACK",
-    progress: 30,
-    notes: null,
+    progress: 75,
+    notes: "Product marketing manager is reviewing and finishing the final content.",
     url: "https://mews.atlassian.net/wiki/spaces/GX/pages/1581023427/Mews+Automations+Go-to-Market+Rollout+Plan+for+Unfold+2026+Launch#6.GTM-Workstreams",
   },
 
