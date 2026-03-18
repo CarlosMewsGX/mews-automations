@@ -24,8 +24,8 @@ const unfoldAutomations = [
     successCriteria: "Pilot-ready templates: Room Upgrades template exists, is editable, and can be published to a working flow on the demo property with minimal changes.",
     feature: "Templates",
     status: "ON TRACK",
-    progress: 75,
-    notes: "On schedule",
+    progress: 85,
+    notes: "Localization \"name and description\", basic documentation about templates, Demo/Dev environments preparation still in progress.",
     url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas?selectedIssue=GEX-1020",
   },
   {
