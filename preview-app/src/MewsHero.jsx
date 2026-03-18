@@ -72,8 +72,8 @@ const unfoldAutomations = [
     successCriteria: null,
     feature: "Production-ready",
     status: "ON TRACK",
-    progress: 40,
-    notes: null,
+    progress: 50,
+    notes: "We had to slow down the progress on this due to an incident (not related to the team) but we expect a bump on the progress by the end of the week",
   },
   {
     tab: "all",
@@ -401,8 +401,8 @@ const emergencyIncluded = [
     successCriteria: "AHS and Gateway meet production standards: security hardened, environments separated, CI/CD pipeline in place, observability instrumented, and resilience patterns applied.",
     feature: "Services production-ready",
     status: "ON TRACK",
-    progress: 40,
-    notes: null,
+    progress: 50,
+    notes: "We had to slow down the progress on this due to an incident (not related to the team) but we expect a bump on the progress by the end of the week",
   },
   {
     type: "product",
