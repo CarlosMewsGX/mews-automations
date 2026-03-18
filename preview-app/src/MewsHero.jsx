@@ -78,7 +78,7 @@ const unfoldAutomations = [
   {
     tab: "all",
     type: "gtm",
-    title: "Finalize pricing model",
+    title: "Finalize pricing model and packaging",
     goal: "Select from 5 evaluated models (recommended: Atlassian-inspired product-linked pricing). Align with Commercial & Finance. Decision required by end of Cycle 2.",
     successCriteria: "Pricing decision made, communicated internally to Sales & CS, pilot pricing terms agreed.",
     feature: "Pricing",
