@@ -84,7 +84,7 @@ const unfoldAutomations = [
     feature: "Pricing",
     status: "ON TRACK",
     progress: 90,
-    notes: "We will enable Automations for everyone who has the Advanced Guest Experience module/package (for existing contracts).",
+    notes: "We will enable Automations for everyone who has the Advanced Guest Experience module/package (for existing contracts) in March 27 – Apr 30.",
     url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas?selectedIssue=GEX-1164",
     url2: "https://mews.atlassian.net/wiki/spaces/GX/pages/1581023427/Mews+Automations+Go-to-Market+Rollout+Plan+for+Unfold+2026+Launch#7.Pricing-%26-Packaging-Options",
   },
