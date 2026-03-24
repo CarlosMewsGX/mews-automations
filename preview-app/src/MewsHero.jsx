@@ -67,6 +67,30 @@ const unfoldAutomations = [
   {
     tab: "all",
     type: "product",
+    title: "Improve Mews Automations connectors organization",
+    goal: "Restructure how connectors are presented so hotel staff can quickly find, understand, and select the right connector when building automations.",
+    successCriteria: "Connectors are grouped by category (e.g., communication, guest operations, revenue), each includes a clear description and use-case hint, and pilot users can identify the correct connector without guidance during moderated testing.",
+    feature: "Connectors",
+    status: "ON TRACK",
+    progress: 0,
+    notes: null,
+    url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas/view/11227217?selectedIssue=GEX-1158",
+  },
+  {
+    tab: "all",
+    type: "product",
+    title: "Usability enhancements based on QA findings",
+    goal: "Resolve UX friction points discovered during QA sessions to ensure the automation builder meets pilot-readiness quality standards.",
+    successCriteria: "All P1 and P2 usability issues from QA sessions are resolved. Pilot users complete the core flows — create, configure, publish, and test an automation — without confusion or errors in moderated usability testing.",
+    feature: "Usability",
+    status: "ON TRACK",
+    progress: 0,
+    notes: null,
+    url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas/view/11227217?selectedIssue=GEX-1176",
+  },
+  {
+    tab: "all",
+    type: "product",
     title: "Automation Hub Services production-ready",
     goal: "Harden the Automation Hub Service (AHS) and Gateway for production-readiness — security, scaling, environment separation, CI/CD pipeline, observability, and resilience.",
     successCriteria: null,
@@ -107,9 +131,9 @@ const unfoldAutomations = [
     goal: "Establish core positioning and competitive narrative.",
     successCriteria: "1-page product brief (internal), customer-facing overview page drafted, competitive battle card (vs Akia, Zapier, Opera automation), press release draft reviewed.",
     feature: "Marketing Assets",
-    status: "ON TRACK",
-    progress: 75,
-    notes: "Product marketing manager is reviewing and finishing the final content.",
+    status: "DONE",
+    progress: 100,
+    notes: null,
     url: "https://mews.atlassian.net/wiki/spaces/GX/pages/1581023427/Mews+Automations+Go-to-Market+Rollout+Plan+for+Unfold+2026+Launch#6.GTM-Workstreams",
   },
 
@@ -127,7 +151,7 @@ const unfoldAutomations = [
     url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas?selectedIssue=GEX-950",
   },
   {
-    tab: "revenue",
+    tab: "efficiency",
     type: "product",
     title: "Allow hotels to automatically reward loyal guests with a spending allowance on arrival.",
     goal: "Automatically issue a per-stay or per-day spending allowance to eligible loyalty guests.",
@@ -517,7 +541,7 @@ function AutomationCard({ item, index, T }) {
 
   const statusColor =
     item.status === "ON TRACK"    ? T.statusOnTrack :
-    item.status === "DONE"        ? T.statusOnTrack :
+    item.status === "DONE"        ? accentColor :
     item.status === "NOT STARTED" ? T.textFaint :
     T.accentOrange; // BLOCKED, DECISION NEEDED, etc.
 
