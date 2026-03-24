@@ -541,7 +541,7 @@ function AutomationCard({ item, index, T }) {
 
   const statusColor =
     item.status === "ON TRACK"    ? T.statusOnTrack :
-    item.status === "DONE"        ? accentColor :
+    item.status === "DONE"        ? T.statusOnTrack :
     item.status === "NOT STARTED" ? T.textFaint :
     T.accentOrange; // BLOCKED, DECISION NEEDED, etc.
 
