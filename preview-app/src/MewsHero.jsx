@@ -804,7 +804,7 @@ const tabs = [
 
 export default function MewsAutomationHubHero() {
   const [activeTab, setActiveTab] = useState("all");
-  const [activeLevel, setActiveLevel] = useState(3);
+  const [activeLevel, setActiveLevel] = useState(4);
   const [nextLevelOpen, setNextLevelOpen] = useState(false);
   const [activePlan, setActivePlan] = useState("unfold");
 
@@ -1042,9 +1042,8 @@ export default function MewsAutomationHubHero() {
             {nextLevelOpen && (
               <div style={{ marginTop: "4px", background: T.collapseBg, borderRadius: "12px", border: `1px solid ${T.borderSubtle}`, overflow: "hidden" }}>
                 {[
-                  { n: "1", title: "Pilot running on demo property", desc: "At least one automation (Room Upgrade template) is live, published, and working end-to-end on the demo property before April. This is the single most critical signal." },
-                  { n: "2", title: "Automation Hub Services production-ready", desc: "Core services are stable, tested, and ready for real traffic — not just demo conditions. This is the foundation everything else runs on." },
-                  { n: "3", title: "Notification through existing services", desc: "The \"Send message to guest\" service is connected and working reliably within the hub. Hotels need to trust that automations actually communicate — this closes that loop." },
+                  { n: "1", title: "Pilot running on production", desc: "At least one automation is live and running on a real production property without errors. Pilot users can create, configure, publish, and trigger automations end-to-end reliably — no crashes, no silent failures, no manual intervention needed." },
+                  { n: "2", title: "Resilience – Rate Limiting", desc: "Ensuring rate limiting is in place and preventing real misuse from customers during Pilot testing. Automations cannot be triggered abusively or in ways that degrade performance for other properties." },
                 ].map(({ n, title, desc }, i, arr) => (
                   <div key={n} style={{ display: "flex", gap: "16px", padding: "20px 24px", borderBottom: i < arr.length - 1 ? `1px solid ${T.borderGhost}` : "none" }}>
                     <div style={{ fontSize: "0.75rem", fontWeight: 800, color: currentLevelColor, opacity: 0.7, minWidth: "16px", paddingTop: "4px" }}>{n}</div>
