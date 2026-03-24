@@ -65,7 +65,7 @@ const unfoldAutomations = [
     url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas?selectedIssue=GEX-940",
   },
   {
-    tab: "all",
+    tab: "revenue",
     type: "product",
     title: "Improve Mews Automations connectors organization",
     goal: "Restructure how connectors are presented so hotel staff can quickly find, understand, and select the right connector when building automations.",
@@ -77,7 +77,7 @@ const unfoldAutomations = [
     url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas/view/11227217?selectedIssue=GEX-1158",
   },
   {
-    tab: "all",
+    tab: "revenue",
     type: "product",
     title: "Usability enhancements based on QA findings",
     goal: "Resolve UX friction points discovered during QA sessions to ensure the automation builder meets pilot-readiness quality standards.",
