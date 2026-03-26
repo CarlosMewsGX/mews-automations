@@ -232,6 +232,19 @@ const unfoldAutomations = [
     url: "https://mews.atlassian.net/wiki/spaces/GX/pages/1581023427/Mews+Automations+Go-to-Market+Rollout+Plan+for+Unfold+2026+Launch#8.Success-Metrics-%26-KPIs",
   },
 
+  {
+    tab: "revenue",
+    type: "gtm",
+    title: "Pre-Unfold MKT preparation",
+    goal: "Create a waitlist landing page and QR code, define email flows, and plan a hands-on demo station at UNFOLD.",
+    successCriteria: "All materials required for the awareness campaign and UNFOLD announcement are ready.",
+    feature: "Pre-Unfold (Pilot Phase)",
+    status: "NOT STARTED",
+    progress: 0,
+    notes: null,
+    url: "https://mews.atlassian.net/browse/GUS-75",
+  },
+
   // ── May 1 – May 27 Unfold ───────────────────────────────────────────────────
   {
     tab: "loyalty",
@@ -796,7 +809,7 @@ function GoalBlock({ label, value, color, T }) {
 
 const tabs = [
   { key: "all",        label: "Mar 3 – Mar 27",        product: "Pilot with a Property on Demo + Moderated User Testing",                           gtm: "Finalize pricing, identify pilot candidates & lay product marketing foundations" },
-  { key: "revenue",    label: "Mar 27 – Apr 30",       product: "Launch extended loyalty automations — welcome gift, allowances, soft signals",       gtm: "Onboard ≥ 2 pilot properties and instrument success metrics" },
+  { key: "revenue",    label: "Mar 27 – Apr 30",       product: "Launch extended loyalty automations — welcome gift, allowances, soft signals",       gtm: "1. Onboard ≥ 2 pilot properties and instrument success metrics · 2. Start executing the pre-Unfold awareness campaign" },
   { key: "loyalty",    label: "May 1 – May 27 Unfold", product: "End-to-end tested and stable for live demonstration at Unfold",                     gtm: "Sales, CS, and marketing assets ready for Unfold launch" },
   { key: "efficiency", label: "May 28 – Jun 30",       product: "TBD",                                                                               gtm: "Full sales team enabled and post-Unfold awareness campaign live" },
   { key: "q3",         label: "Jul 1 – Sep 30",        product: "Launch tier automator, early and late check-out automations",                        gtm: "TBD" },
