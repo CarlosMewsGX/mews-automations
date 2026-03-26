@@ -271,7 +271,7 @@ const unfoldAutomations = [
     url: "https://mews.atlassian.net/wiki/spaces/GX/pages/1581023427/Mews+Automations+Go-to-Market+Rollout+Plan+for+Unfold+2026+Launch#11.Onboarding-%26-Setup",
   },
   {
-    tab: "loyalty",
+    tab: "efficiency",
     type: "gtm",
     title: "Begin Sales & CS enablement",
     goal: "Equip Sales and CS for pilot conversations.",
@@ -283,19 +283,7 @@ const unfoldAutomations = [
     url: "https://mews.atlassian.net/wiki/spaces/GX/pages/1581023427/Mews+Automations+Go-to-Market+Rollout+Plan+for+Unfold+2026+Launch#6.GTM-Workstreams",
   },
   {
-    tab: "loyalty",
-    type: "gtm",
-    title: "Press release drafted & Unfold session narrative",
-    goal: "Launch content ready for Unfold.",
-    successCriteria: "\"Mews Launches Automation Hub\" press release approved (PMM + Comms). Unfold main-stage demo script complete. Customer video/demo reel produced.",
-    feature: "Unfold Assets",
-    status: "NOT STARTED",
-    progress: 0,
-    notes: "6–8 week lead time — must start early Cycle 3. Already working on Unfold session narrative — it's going to be Pepa's keynote.",
-    url: "https://mews.atlassian.net/wiki/spaces/GX/pages/1581023427/Mews+Automations+Go-to-Market+Rollout+Plan+for+Unfold+2026+Launch#6.GTM-Workstreams",
-  },
-  {
-    tab: "loyalty",
+    tab: "efficiency",
     type: "gtm",
     title: "Mews University: Automation Hub Module",
     goal: "Deliver structured education to drive sustainable adoption and reduce CS/support load.",
@@ -307,17 +295,18 @@ const unfoldAutomations = [
     url: "https://mews.atlassian.net/wiki/spaces/GX/pages/1581023427/Mews+Automations+Go-to-Market+Rollout+Plan+for+Unfold+2026+Launch#6.GTM-Workstreams",
     url2: "https://mews.atlassian.net/jira/polaris/projects/AN/ideas?selectedIssue=AN-1133",
   },
+
   {
     tab: "loyalty",
     type: "gtm",
-    title: "Unfold Automations Video",
-    goal: "Create a competitive narrative. One video ready for Unfold showing the benefits of the product.",
-    successCriteria: null,
+    title: "UNFOLD Announcement",
+    goal: "Main stage presentation ready, with email sequence and community post sent.",
+    successCriteria: "Successfully announce Automations at UNFOLD and begin receiving leads and onboarding customers.",
     feature: "Unfold Assets",
     status: "NOT STARTED",
     progress: 0,
     notes: null,
-    url: "https://mews.atlassian.net/wiki/spaces/GX/pages/1581023427/Mews+Automations+Go-to-Market+Rollout+Plan+for+Unfold+2026+Launch#6.GTM-Workstreams",
+    url: "https://mews.atlassian.net/browse/GUS-76",
   },
 
   // ── May 28 – Jun 30 ─────────────────────────────────────────────────────────
@@ -810,7 +799,7 @@ function GoalBlock({ label, value, color, T }) {
 const tabs = [
   { key: "all",        label: "Mar 3 – Mar 27",        product: "Pilot with a Property on Demo + Moderated User Testing",                           gtm: "Finalize pricing, identify pilot candidates & lay product marketing foundations" },
   { key: "revenue",    label: "Mar 27 – Apr 30",       product: "Launch extended loyalty automations — welcome gift, allowances, soft signals",       gtm: "1. Onboard ≥ 2 pilot properties and instrument success metrics · 2. Start executing the pre-Unfold awareness campaign" },
-  { key: "loyalty",    label: "May 1 – May 27 Unfold", product: "End-to-end tested and stable for live demonstration at Unfold",                     gtm: "Sales, CS, and marketing assets ready for Unfold launch" },
+  { key: "loyalty",    label: "May 1 – May 27 Unfold", product: "End-to-end tested and stable for live demonstration at Unfold",                     gtm: "Pilot flow defined, waitlist campaign launched, and UNFOLD announcement successfully executed" },
   { key: "efficiency", label: "May 28 – Jun 30",       product: "TBD",                                                                               gtm: "Full sales team enabled and post-Unfold awareness campaign live" },
   { key: "q3",         label: "Jul 1 – Sep 30",        product: "Launch tier automator, early and late check-out automations",                        gtm: "TBD" },
 ];
