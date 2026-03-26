@@ -9,7 +9,18 @@
       "Bash(/opt/homebrew/Cellar/node@24/24.14.0/bin/node delete-comments.mjs)",
       "Bash(curl -s \"https://firestore.googleapis.com/v1/projects/automations-6fa65/databases/\\(default\\)/documents/comments?key=AIzaSyBmJKl6TqUpCfvUlJ2F-_3OFyYBNHZ9z_Y\")",
       "Bash(/opt/homebrew/Cellar/node@24/24.14.0/bin/node -e \"const d=require\\(''fs''\\).readFileSync\\(''/dev/stdin'',''utf8''\\); const j=JSON.parse\\(d\\); \\(j.documents||[]\\).forEach\\(doc=>console.log\\(doc.name\\)\\)\")",
-      "Bash(curl -s -X DELETE \"https://firestore.googleapis.com/v1/projects/automations-6fa65/databases/\\(default\\)/documents/comments/allow-hotels-to-activate-pre-built-automations-instead-of-bu/messages/fv9uwCu8g6OIZ2L4lLF9?key=AIzaSyBmJKl6TqUpCfvUlJ2F-_3OFyYBNHZ9z_Y\")"
+      "Bash(curl -s -X DELETE \"https://firestore.googleapis.com/v1/projects/automations-6fa65/databases/\\(default\\)/documents/comments/allow-hotels-to-activate-pre-built-automations-instead-of-bu/messages/fv9uwCu8g6OIZ2L4lLF9?key=AIzaSyBmJKl6TqUpCfvUlJ2F-_3OFyYBNHZ9z_Y\")",
+      "mcp__c1ecdd0e-f569-4212-b93f-9b031fecf87c__getConfluencePage",
+      "Bash(az --version)",
+      "Bash(brew install:*)",
+      "Bash(echo $PATH)",
+      "Bash(/opt/homebrew/bin/brew install:*)",
+      "Bash(/usr/local/bin/brew install:*)",
+      "Read(//opt/**)",
+      "Bash(curl -L https://aka.ms/InstallAzureCli)",
+      "Bash(bash)",
+      "Bash(pip3 install:*)",
+      "Bash(/Users/carlos.collado/Library/Python/3.9/bin/az --version)"
     ]
   }
 }

@@ -323,7 +323,7 @@ const unfoldAutomations = [
   {
     tab: "efficiency",
     type: "gtm",
-    title: "Post-Unfold awareness campaign (Apr–May)",
+    title: "Post-Unfold awareness campaign (June–July)",
     goal: "Build demand ahead of Unfold.",
     successCriteria: "Teaser content on socials, thought-leadership blog post, Community \"Coming Soon\" post, segmented email to existing customers, partner brief to Marketplace partners.",
     feature: "Marketing Assets",
