@@ -158,8 +158,8 @@ const unfoldAutomations = [
     successCriteria: "\"Send message to guest\" action available in the Workflow Creator, working with Comms Hub templates.",
     feature: "Comms Hub integration",
     status: "ON TRACK",
-    progress: 20,
-    notes: "Comms Hub not available for an integration.",
+    progress: 80,
+    notes: "Only 1 PR left to merge and it's gonna be complete.",
     url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas?selectedIssue=GEX-1167",
   },
   {
@@ -805,7 +805,7 @@ const tabs = [
 ];
 
 export default function MewsAutomationHubHero() {
-  const [activeTab, setActiveTab] = useState("all");
+  const [activeTab, setActiveTab] = useState("revenue");
   const [activeLevel, setActiveLevel] = useState(4);
   const [nextLevelOpen, setNextLevelOpen] = useState(false);
   const [activePlan, setActivePlan] = useState("unfold");
