@@ -158,8 +158,8 @@ const unfoldAutomations = [
     successCriteria: "\"Send message to guest\" action available in the Workflow Creator, working with Comms Hub templates.",
     feature: "Comms Hub integration",
     status: "ON TRACK",
-    progress: 80,
-    notes: "Only 1 PR left to merge and it's gonna be complete.",
+    progress: 90,
+    notes: "Troubleshooting 1 issue found with Guest Messaging.",
     url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas?selectedIssue=GEX-1167",
   },
   {
