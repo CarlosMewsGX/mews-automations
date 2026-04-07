@@ -798,7 +798,7 @@ function GoalBlock({ label, value, color, T }) {
 
 const tabs = [
   { key: "all",        label: "Mar 3 – Mar 27",        product: "Pilot with a Property on Demo + Moderated User Testing",                           gtm: "Finalize pricing, identify pilot candidates & lay product marketing foundations" },
-  { key: "revenue",    label: "Mar 27 – Apr 30",       product: "Launch extended loyalty automations — welcome gift, allowances, soft signals. Improve product quality with better information architecture, UX writing and usability improvements.",       gtm: "1. Onboard ≥ 2 pilot properties and instrument success metrics · 2. Start executing the pre-Unfold awareness campaign" },
+  { key: "revenue",    label: "Mar 27 – Apr 30",       product: "Launch extended loyalty automations — welcome gift, soft signals. Improve product quality with better information architecture, UX writing and usability improvements.",       gtm: "1. Onboard ≥ 2 pilot properties and instrument success metrics · 2. Start executing the pre-Unfold awareness campaign" },
   { key: "loyalty",    label: "May 1 – May 27 Unfold", product: "End-to-end tested and stable for live demonstration at Unfold",                     gtm: "Pilot flow defined, waitlist campaign launched, and UNFOLD announcement successfully executed" },
   { key: "efficiency", label: "May 28 – Jun 30",       product: "TBD",                                                                               gtm: "Full sales team enabled and post-Unfold awareness campaign live" },
   { key: "q3",         label: "Jul 1 – Sep 30",        product: "Launch tier automator, early and late check-out automations",                        gtm: "TBD" },
