@@ -200,13 +200,13 @@ const unfoldAutomations = [
   {
     tab: "revenue",
     type: "product",
-    title: "Resilience – Rate Limiting",
-    goal: "Ensuring rate limiting prevents real mis-use from customers during Pilot testing.",
-    successCriteria: "Rate limits enforced per customer and/or per plan tier consistently across all platform entry points.",
-    feature: "Rate Limiting",
+    title: "Mews Automations CoPilot — POC (parallel best-effort track)",
+    goal: "Explore CoPilot (AI-assisted automation creation) and automation testing capabilities via a POC with Appmixer — without compromising the stable Unfold deliverable.",
+    successCriteria: "POC running with Appmixer. If mature enough, CoPilot revealed at Unfold as a 'one more thing' moment. Production inclusion waits until stability is confirmed. Joel's approval obtained to run both tracks in parallel — stable product to production by end of April, CoPilot integrates when ready.",
+    feature: "CoPilot POC",
     status: "NOT STARTED",
     progress: 0,
-    notes: null,
+    notes: "Best-effort track — will not compromise the stable Unfold deliverable. Decision pending Joel's approval.",
   },
   {
     tab: "revenue",
@@ -808,7 +808,7 @@ const tabs = [
   { key: "revenue",    label: "Mar 27 – Apr 30",       product: "Launch extended loyalty automations — welcome gift and soft signals. Improve product quality with better information architecture, UX writing and usability improvements.",       gtm: "1. Onboard ≥ 2 pilot properties and instrument success metrics · 2. Start executing the pre-Unfold awareness campaign" },
   { key: "loyalty",    label: "May 1 – May 27 Unfold", product: "End-to-end tested and stable for live demonstration at Unfold",                     gtm: "Pilot flow defined, waitlist campaign launched, and UNFOLD announcement successfully executed" },
   { key: "efficiency", label: "May 28 – Jun 30",       product: "TBD",                                                                               gtm: "Full sales team enabled and post-Unfold awareness campaign live" },
-  { key: "q3",         label: "Jul 1 – Sep 30",        product: "Launch tier automator, early and late check-out automations",                        gtm: "TBD" },
+  { key: "q3",         label: "Jul 1 – Sep 30",        product: "Discover new desirable and viable opportunities to feed the next backlog cycle — grounded in real customer research, not assumptions.",                        gtm: "Continue onboarding new customers progressively until General Availability — paced by stability signals, adoption metrics, and team capacity." },
 ];
 
 export default function MewsAutomationHubHero() {
