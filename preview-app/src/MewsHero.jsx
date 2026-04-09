@@ -334,44 +334,6 @@ const unfoldAutomations = [
     notes: "PMM + CRM ownership — feeds into Unfold launch activation",
     url: "https://mews.atlassian.net/wiki/spaces/GX/pages/1581023427/Mews+Automations+Go-to-Market+Rollout+Plan+for+Unfold+2026+Launch#6.GTM-Workstreams",
   },
-
-  // ── Jul 1 – Sep 30 ──────────────────────────────────────────────────────────
-  {
-    tab: "q3",
-    type: "product",
-    title: "Allow hotels without loyalty programs to create a lightweight, automated loyalty tier system using behavioral data Mews already captures.",
-    goal: "Automatically assign and update guest loyalty tiers based on stay count, revenue, and recency — no external system required.",
-    successCriteria: "Pilot-ready end-to-end flow: publishable + runnable on property data.",
-    feature: "Tier Automator",
-    status: "NOT STARTED",
-    progress: 0,
-    notes: null,
-    url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas?selectedIssue=GEX-1166",
-  },
-  {
-    tab: "q3",
-    type: "product",
-    title: "Allow hotels to automatically recognize reservations eligible for early check-in based on availability and predefined conditions.",
-    goal: "Automatically enable early check-in for eligible reservations without requiring staff intervention.",
-    successCriteria: "Pilot-ready end-to-end flow: publishable + runnable on property data.",
-    feature: "Early Check-In",
-    status: "NOT STARTED",
-    progress: 0,
-    notes: null,
-    url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas?selectedIssue=GEX-943",
-  },
-  {
-    tab: "q3",
-    type: "product",
-    title: "Allow hotels to automatically recognize reservations eligible for late check-out based on availability and predefined conditions.",
-    goal: "Automatically enable late check-out for eligible reservations without requiring staff intervention.",
-    successCriteria: "Pilot-ready end-to-end flow: publishable + runnable on property data.",
-    feature: "Late Check-Out",
-    status: "NOT STARTED",
-    progress: 0,
-    notes: null,
-    url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas?selectedIssue=GEX-1168",
-  },
 ];
 
 // Emergency plan — included items
