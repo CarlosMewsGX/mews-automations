@@ -211,14 +211,14 @@ const unfoldAutomations = [
   {
     tab: "revenue",
     type: "gtm",
-    title: "Success Metrics & KPIs",
-    goal: "Instrument KPIs before pilot launch.",
-    successCriteria: "Product instrumentation to track KPIs in place before Cycle 3 ends.",
-    feature: "Pre-Unfold (Pilot Phase)",
+    title: "Mews Automations — Closed Beta Plan",
+    goal: "Define and execute the Closed Beta plan for Mews Automations ahead of Unfold.",
+    successCriteria: "Closed Beta plan documented, pilot properties onboarded, and success criteria instrumented.",
+    feature: "Closed Beta",
     status: "NOT STARTED",
     progress: 0,
     notes: null,
-    url: "https://mews.atlassian.net/wiki/spaces/GX/pages/1581023427/Mews+Automations+Go-to-Market+Rollout+Plan+for+Unfold+2026+Launch#8.Success-Metrics-%26-KPIs",
+    url: "https://mews.atlassian.net/wiki/spaces/GX/pages/edit-v2/1846640737",
   },
 
   {
