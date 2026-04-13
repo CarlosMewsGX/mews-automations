@@ -200,17 +200,6 @@ const unfoldAutomations = [
   {
     tab: "revenue",
     type: "gtm",
-    title: "Pilot customers onboarded (≥ 2 properties by Unfold)",
-    goal: "Onboard ≥ 2 pilot properties and instrument success metrics and start executing the pre-Unfold awareness campaign.",
-    successCriteria: "At least 2 properties onboarded with CS-led kickoff, first flow live per property, health check cadence running, escalation path defined.",
-    feature: "Production Pilot",
-    status: "NOT STARTED",
-    progress: 0,
-    notes: null,
-  },
-  {
-    tab: "revenue",
-    type: "gtm",
     title: "Mews Automations — Closed Beta Plan",
     goal: "Define and execute the Closed Beta plan for Mews Automations ahead of Unfold.",
     successCriteria: "Closed Beta plan documented, pilot properties onboarded, and success criteria instrumented.",
