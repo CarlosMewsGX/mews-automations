@@ -172,6 +172,7 @@ const unfoldAutomations = [
     status: "ON TRACK",
     progress: 30,
     notes: null,
+    url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas/view/11227217?selectedIssue=GEX-1170&atlOrigin=eyJpIjoiZTJhZWExNWI0MzQ4NDczYjgyNjFhNTQxOTAwMjU3ZTIiLCJwIjoiaiJ9",
   },
   {
     tab: "revenue",
