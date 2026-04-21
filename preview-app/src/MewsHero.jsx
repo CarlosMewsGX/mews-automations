@@ -121,9 +121,9 @@ const unfoldAutomations = [
     goal: "Automatically create a staff task to deliver a personalized welcome gift to loyal guests.",
     successCriteria: "Pilot-ready end-to-end flow: publishable + runnable on property data.",
     feature: "Amenity gift",
-    status: "ON TRACK",
-    progress: 70,
-    notes: "Evaluating going with smart tips engine vs our own agent",
+    status: "DONE",
+    progress: 100,
+    notes: null,
     url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas?selectedIssue=GEX-950",
   },
   {
@@ -159,7 +159,7 @@ const unfoldAutomations = [
     feature: "Comms Hub integration",
     status: "ON TRACK",
     progress: 90,
-    notes: "Troubleshooting 1 issue found with Guest Messaging.",
+    notes: "Blocker: if the customer hasn't set up Guest Messaging correctly, no error message is shown. Waiting for the Comms team to add the validation.",
     url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas?selectedIssue=GEX-1167",
   },
   {
@@ -170,8 +170,8 @@ const unfoldAutomations = [
     successCriteria: "Event based triggers and Zapier-like components available in Mews Automations.",
     feature: "Event based triggers",
     status: "ON TRACK",
-    progress: 30,
-    notes: null,
+    progress: 40,
+    notes: "Possible blocker: unable to identify the proper Reservation Created event through the ConnectorAPI.",
     url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas/view/11227217?selectedIssue=GEX-1170&atlOrigin=eyJpIjoiZTJhZWExNWI0MzQ4NDczYjgyNjFhNTQxOTAwMjU3ZTIiLCJwIjoiaiJ9",
   },
   {
@@ -182,8 +182,8 @@ const unfoldAutomations = [
     successCriteria: "All Prioritized usability issues from QA sessions are resolved. Pilot users complete the core flows without confusion or errors.",
     feature: "Usability",
     status: "ON TRACK",
-    progress: 60,
-    notes: null,
+    progress: 90,
+    notes: "Reviewing copy and running blitz testing to close out remaining issues.",
     url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas/view/11227217?selectedIssue=GEX-1176",
   },
   {
