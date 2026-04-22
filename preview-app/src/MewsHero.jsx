@@ -189,13 +189,13 @@ const unfoldAutomations = [
   {
     tab: "revenue",
     type: "product",
-    title: "Mews Automations CoPilot — POC (parallel best-effort track)",
+    title: "Mews Automations CoPilot — POC (Deployed in Demo Environment)",
     goal: "Explore the CoPilot proof of concept in parallel with Appmixer's development of AI-assisted automation creation and testing capabilities — without compromising the stability of the Unfold deliverable.",
-    successCriteria: "A MEWS-integrated CoPilot POC is running on Appmixer and ready to demo at Unfold. Appmixer's native AI capabilities are validated and mature enough for production inclusion. A stable product is shipped to production by end of April; CoPilot is integrated once it meets readiness criteria.",
+    successCriteria: "A MEWS-integrated CoPilot POC is running on Appmixer and ready to demo at Unfold in DEMO environment.",
     feature: "CoPilot POC",
     status: "ON TRACK",
     progress: 5,
-    notes: "Best-effort track — will not compromise the stable Unfold deliverable. Decision pending Joel's approval.",
+    notes: "It will be ready at the end of this week.",
   },
   {
     tab: "revenue",
