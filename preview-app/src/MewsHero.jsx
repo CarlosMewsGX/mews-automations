@@ -194,7 +194,7 @@ const unfoldAutomations = [
     successCriteria: "A MEWS-integrated CoPilot POC is running on Appmixer and ready to demo at Unfold in DEMO environment.",
     feature: "CoPilot POC",
     status: "ON TRACK",
-    progress: 5,
+    progress: 75,
     notes: "It will be ready at the end of this week.",
   },
   {
