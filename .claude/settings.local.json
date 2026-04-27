@@ -22,7 +22,8 @@
       "Bash(pip3 install:*)",
       "Bash(/Users/carlos.collado/Library/Python/3.9/bin/az --version)",
       "Bash(cat \"/Users/carlos.collado/Desktop/Mews claude/.github/workflows/\"*.yml)",
-      "Bash(gh auth *)"
+      "Bash(gh auth *)",
+      "Bash(claude plugin *)"
     ]
   }
 }
