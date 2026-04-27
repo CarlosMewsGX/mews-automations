@@ -169,9 +169,9 @@ const unfoldAutomations = [
     goal: "Provide event based triggers and actions components, so our customers could build their own flows.",
     successCriteria: "Event based triggers and Zapier-like components available in Mews Automations.",
     feature: "Event based triggers",
-    status: "ON TRACK",
-    progress: 40,
-    notes: "Possible blocker: unable to identify the proper Reservation Created event through the ConnectorAPI.",
+    status: "DONE",
+    progress: 100,
+    notes: "Guest Profile Created, Reservation Checked In, Reservation Created, and Reservation Updated are all available in the demo environment.",
     url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas/view/11227217?selectedIssue=GEX-1170&atlOrigin=eyJpIjoiZTJhZWExNWI0MzQ4NDczYjgyNjFhNTQxOTAwMjU3ZTIiLCJwIjoiaiJ9",
   },
   {
