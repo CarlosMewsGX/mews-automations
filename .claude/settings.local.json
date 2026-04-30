@@ -25,7 +25,20 @@
       "Bash(gh auth *)",
       "Bash(claude plugin *)",
       "Bash(gh --version)",
-      "Bash(gh repo *)"
+      "Bash(gh repo *)",
+      "Bash(pnpm install *)",
+      "Bash(npm install *)",
+      "Bash(npm error *)",
+      "Bash(sudo npm *)",
+      "Bash(node -e \"require\\('child_process'\\).execSync\\('npm install -g pnpm --force', {stdio:'inherit'}\\)\")",
+      "Bash(curl -fsSL https://get.pnpm.io/install.sh)",
+      "Bash(sh -)",
+      "Bash(export PNPM_HOME=\"/Users/carlos.collado/Library/pnpm\")",
+      "Bash(export PATH=\"$PNPM_HOME:$PATH\")",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(gh run *)"
     ]
   }
 }
