@@ -127,18 +127,6 @@ const unfoldAutomations = [
     url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas?selectedIssue=GEX-950",
   },
   {
-    tab: "efficiency",
-    type: "product",
-    title: "Allow hotels to automatically reward loyal guests with a spending allowance on arrival.",
-    goal: "Automatically issue a per-stay or per-day spending allowance to eligible loyalty guests.",
-    successCriteria: "Pilot-ready end-to-end flow: publishable + runnable on property data.",
-    feature: "Allowances",
-    status: "BLOCKED",
-    progress: 0,
-    notes: "The Allowance PMS feature is still in its early stages, so we will wait to integrate it once it's ready for general availability (GA).",
-    url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas?selectedIssue=GEX-1007",
-  },
-  {
     tab: "revenue",
     type: "product",
     title: "Allow hotels without loyalty programs to offer soft benefits automations",
@@ -259,31 +247,6 @@ const unfoldAutomations = [
     notes: "Template: 20–40 min setup · Custom: 1–3 hours · Must be ready before pilot kick-off",
     url: "https://mews.atlassian.net/wiki/spaces/GX/pages/1581023427/Mews+Automations+Go-to-Market+Rollout+Plan+for+Unfold+2026+Launch#11.Onboarding-%26-Setup",
   },
-  {
-    tab: "efficiency",
-    type: "gtm",
-    title: "Begin Sales & CS enablement",
-    goal: "Equip Sales and CS for pilot conversations.",
-    successCriteria: "Sales pitch deck built, objection-handling guide (vs. Akia/Zapier) complete, internal Sales training run. CS lead assigned for pilot.",
-    feature: "Enablement",
-    status: "NOT STARTED",
-    progress: 0,
-    notes: "Enablement training request for Sales and CS has been submitted.",
-    url: "https://mews.atlassian.net/wiki/spaces/GX/pages/1581023427/Mews+Automations+Go-to-Market+Rollout+Plan+for+Unfold+2026+Launch#6.GTM-Workstreams",
-  },
-  {
-    tab: "efficiency",
-    type: "gtm",
-    title: "Mews University: Automation Hub Module",
-    goal: "Deliver structured education to drive sustainable adoption and reduce CS/support load.",
-    successCriteria: "Modules 1–4 live on Mews University before Unfold (22 May). Module 6 (internal CS/Support depth) delivered before pilot launch.",
-    feature: "Enablement",
-    status: "NOT STARTED",
-    progress: 0,
-    notes: "PMM (content) + CS lead (review) + SA (Module 5)",
-    url: "https://mews.atlassian.net/wiki/spaces/GX/pages/1581023427/Mews+Automations+Go-to-Market+Rollout+Plan+for+Unfold+2026+Launch#6.GTM-Workstreams",
-    url2: "https://mews.atlassian.net/jira/polaris/projects/AN/ideas?selectedIssue=AN-1133",
-  },
 
   {
     tab: "loyalty",
@@ -301,27 +264,39 @@ const unfoldAutomations = [
   // ── May 28 – Jun 30 ─────────────────────────────────────────────────────────
   {
     tab: "efficiency",
-    type: "gtm",
-    title: "Sales deck finalized & all AEs trained",
-    goal: "100% of qualified prospects see a live demo.",
-    successCriteria: "Sales pitch deck complete (discovery → demo → close), objection-handling guide finalized, 100% of AEs trained.",
-    feature: "Enablement",
-    status: "NOT STARTED",
+    type: "product",
+    title: "Internal event source for PMS trigger events",
+    goal: "Replace the Connector webhook — designed for external 3rd-party integrations — as our internal source of PMS trigger events. This causes non-realtime delivery, missing state data, forced monolith DB lookups, known classification bugs, and replica lag workarounds. A proper internal eventing source would eliminate all of this complexity.",
+    successCriteria: "A reliable internal eventing source is in place for PMS trigger events, removing dependency on the Connector integration client webhook and resolving the known delivery, classification, and replica lag issues.",
+    feature: "Internal Eventing",
+    status: "BLOCKED",
     progress: 0,
-    notes: "Depends on pricing decision from Cycle 2",
-    url: "https://mews.atlassian.net/wiki/spaces/GX/pages/1581023427/Mews+Automations+Go-to-Market+Rollout+Plan+for+Unfold+2026+Launch#6.GTM-Workstreams",
+    notes: "Company-wide problem — no concrete solution yet. Under investigation.",
+    url: "https://mews.atlassian.net/wiki/spaces/OPS/pages/2040693884/Tech+Debt+Internal+event+source+for+PMS+trigger+events",
   },
   {
     tab: "efficiency",
-    type: "gtm",
-    title: "Post-Unfold awareness campaign (June–July)",
-    goal: "Build demand ahead of Unfold.",
-    successCriteria: "Teaser content on socials, thought-leadership blog post, Community \"Coming Soon\" post, segmented email to existing customers, partner brief to Marketplace partners.",
-    feature: "Marketing Assets",
-    status: "NOT STARTED",
+    type: "product",
+    title: "New connectors and components",
+    goal: "Broaden the range of workflows hotels can build by expanding the connector and component library.",
+    successCriteria: "All defined connectors are developed and available in Mews Automations, enabling customers to automate a significantly wider range of hospitality flows.",
+    feature: "Connectors",
+    status: "BLOCKED",
     progress: 0,
-    notes: "PMM + CRM ownership — feeds into Unfold launch activation",
-    url: "https://mews.atlassian.net/wiki/spaces/GX/pages/1581023427/Mews+Automations+Go-to-Market+Rollout+Plan+for+Unfold+2026+Launch#6.GTM-Workstreams",
+    notes: "All connectors are already defined and shaped. Development is blocked until the internal event source problem is resolved.",
+    url: "https://mews.atlassian.net/wiki/spaces/GX/pages/2097119707/Connectors+Shaping",
+  },
+  {
+    tab: "efficiency",
+    type: "product",
+    title: "Developer documentation for connectors, components and templates",
+    goal: "Provide clear, high-quality documentation so internal and external developers can contribute connectors, components, and templates to Mews Automations.",
+    successCriteria: "Documentation is published, reviewed with developers for quality, and officially available.",
+    feature: "Developer Docs",
+    status: "ON TRACK",
+    progress: 80,
+    notes: "Evaluating quality with a group of developers before making it official.",
+    url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas/view/12481126?selectedIssue=GEX-1232&atlOrigin=eyJpIjoiZDJhNWM1N2ZhNzc3NGNkM2E2M2Q3YjQ4NTdkZGU3OWEiLCJwIjoiaiJ9",
   },
   // ── Jul 1 – Sep 30 ──────────────────────────────────────────────────────────
   {
@@ -796,7 +771,7 @@ const tabs = [
   { key: "all",        label: "Mar 3 – Mar 27",        product: "Pilot with a Property on Demo + Moderated User Testing",                           gtm: "Finalize pricing, identify pilot candidates & lay product marketing foundations" },
   { key: "revenue",    label: "Mar 27 – Apr 30",       product: "Launch extended loyalty automations — welcome gift and soft signals. Improve product quality with better information architecture, UX writing and usability improvements.",       gtm: "1. Onboard ≥ 2 pilot properties and instrument success metrics · 2. Start executing the pre-Unfold awareness campaign" },
   { key: "loyalty",    label: "May 1 – May 27 Unfold", product: "End-to-end tested and stable for live demonstration at Unfold",                     gtm: "Pilot flow defined, waitlist campaign launched, and UNFOLD announcement successfully executed" },
-  { key: "efficiency", label: "May 28 – Jun 30",       product: "TBD",                                                                               gtm: "Full sales team enabled and post-Unfold awareness campaign live" },
+  { key: "efficiency", label: "May 28 – Jun 30",       product: "TBD",                                                                               gtm: "" },
   { key: "q3",         label: "Jul 1 – Sep 30",        product: "Discover new desirable and viable opportunities to feed the next backlog cycle — grounded in real customer research, not assumptions.",                        gtm: "Continue onboarding new customers progressively until General Availability — paced by stability signals, adoption metrics, and team capacity." },
 ];
 
@@ -1040,8 +1015,9 @@ export default function MewsAutomationHubHero() {
             {nextLevelOpen && (
               <div style={{ marginTop: "4px", background: T.collapseBg, borderRadius: "12px", border: `1px solid ${T.borderSubtle}`, overflow: "hidden" }}>
                 {[
-                  { n: "1", title: "Pilot running on production", desc: "At least one automation is live and running on a real production property without errors. Pilot users can create and trigger automations end-to-end reliably — no crashes, no silent failures, no manual intervention needed." },
-                  { n: "2", title: "Resilience – Rate Limiting", desc: "Ensuring rate limiting is in place and preventing real misuse from customers during Pilot testing. Automations cannot be triggered abusively or in ways that degrade performance for other properties." },
+                  { n: "1", title: "Event-based triggers", desc: "The new triggers implementation gives us a more reliable and stable execution model — reducing the risk of breaking existing flows and increasing our confidence in shipping to production." },
+                  { n: "2", title: "30+ connectors", desc: "Expanding the connector library to 30+ options will give customers solid data integrations to automate a much wider range of real-world hospitality flows — making the product genuinely useful across diverse property setups." },
+                  { n: "3", title: "CoPilot", desc: "An AI-assisted automation builder will dramatically lower the barrier to entry — democratising automation creation and driving adoption beyond power users." },
                 ].map(({ n, title, desc }, i, arr) => (
                   <div key={n} style={{ display: "flex", gap: "16px", padding: "20px 24px", borderBottom: i < arr.length - 1 ? `1px solid ${T.borderGhost}` : "none" }}>
                     <div style={{ fontSize: "0.75rem", fontWeight: 800, color: currentLevelColor, opacity: 0.7, minWidth: "16px", paddingTop: "4px" }}>{n}</div>
