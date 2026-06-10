@@ -269,9 +269,9 @@ const unfoldAutomations = [
     goal: "Replace the Connector webhook — designed for external 3rd-party integrations — as our internal source of PMS trigger events. This causes non-realtime delivery, missing state data, forced monolith DB lookups, known classification bugs, and replica lag workarounds. A proper internal eventing source would eliminate all of this complexity.",
     successCriteria: "A reliable internal eventing source is in place for PMS trigger events, removing dependency on the Connector integration client webhook and resolving the known delivery, classification, and replica lag issues.",
     feature: "Internal Eventing",
-    status: "BLOCKED",
-    progress: 0,
-    notes: "Company-wide problem — no concrete solution yet. Under investigation.",
+    status: "ON TRACK",
+    progress: 20,
+    notes: "Guest-related triggers expected to be ready before end of June. Reservation triggers are under evaluation — in discussion with the Reservations team on feasibility, including how async communication should work (being shaped with Vitor this week).",
     url: "https://mews.atlassian.net/wiki/spaces/OPS/pages/2040693884/Tech+Debt+Internal+event+source+for+PMS+trigger+events",
   },
   {
