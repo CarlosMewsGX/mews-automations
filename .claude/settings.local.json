@@ -41,7 +41,12 @@
       "Bash(gh run *)",
       "Bash(cd '/Users/carlos.collado/Desktop/Mews claude' && cp preview-app/src/MewsHero.jsx /tmp/MewsHero_backup.jsx && echo \"backup done\")",
       "Bash(git reset *)",
-      "Bash(git restore *)"
+      "Bash(git restore *)",
+      "mcp__c1ecdd0e-f569-4212-b93f-9b031fecf87c__searchConfluenceUsingCql",
+      "Read(//Users/carlos.collado/Desktop/Automations documentation/**)",
+      "Bash(pnpm run *)",
+      "Bash(npx tsc *)",
+      "Bash(./node_modules/.bin/tsc --noEmit)"
     ]
   }
 }
