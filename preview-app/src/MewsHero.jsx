@@ -270,9 +270,20 @@ const unfoldAutomations = [
     successCriteria: "A reliable internal eventing source is in place for PMS trigger events, removing dependency on the Connector integration client webhook and resolving the known delivery, classification, and replica lag issues.",
     feature: "Internal Eventing",
     status: "ON TRACK",
-    progress: 20,
-    notes: "Guest-related triggers expected to be ready before end of June. Reservation triggers are under evaluation — in discussion with the Reservations team on feasibility, including how async communication should work (being shaped with Vitor this week).",
+    progress: 40,
+    notes: "Event-producing part for the guest-profiles service is complete — will now use guest-created events instead of Connector webhooks. The service has also been upgraded to .NET 10 to use the latest event libraries. The event-consuming part (in the automations project) is still in progress.",
     url: "https://mews.atlassian.net/wiki/spaces/OPS/pages/2040693884/Tech+Debt+Internal+event+source+for+PMS+trigger+events",
+  },
+  {
+    tab: "efficiency",
+    type: "product",
+    title: "Remaining GA blockers",
+    goal: "Resolve the remaining infrastructure blockers before General Availability.",
+    successCriteria: "Rate limiting deployed and tuned to production baselines. Action log correctly reflects multi-branch flow executions. Automatic enable/disable integration handles production load.",
+    feature: "GA Readiness",
+    status: "ON TRACK",
+    progress: 30,
+    notes: "Rate limiting: configured on gateway API (100 req/sec per enterprise) and Appmixer components (100 executions/user, FIFO queue with retries at 1, 2, 3 min). Gateway side deployed to production. Component side ready but not yet deployed pending dev tests. Open point: action log needs a rethink — flows can have multiple branches, so a single aggregated status row falls short. A per-step expandable view is being considered. Waiting on Appmixer (Petr) for flow completion notifications and correlationId in /logs. Automatic enable/disable integration: not yet started.",
   },
   {
     tab: "efficiency",
@@ -293,9 +304,9 @@ const unfoldAutomations = [
     goal: "Provide clear, high-quality documentation so internal and external developers can contribute connectors, components, and templates to Mews Automations.",
     successCriteria: "Documentation is published, reviewed with developers for quality, and officially available.",
     feature: "Developer Docs",
-    status: "ON TRACK",
-    progress: 80,
-    notes: "Evaluating quality with a group of developers before making it official.",
+    status: "DONE",
+    progress: 100,
+    notes: "Documentation is complete. Shared with a group of engineers to gather feedback before official release.",
     url: "https://mews.atlassian.net/jira/polaris/projects/GEX/ideas/view/12481126?selectedIssue=GEX-1232&atlOrigin=eyJpIjoiZDJhNWM1N2ZhNzc3NGNkM2E2M2Q3YjQ4NTdkZGU3OWEiLCJwIjoiaiJ9",
   },
   // ── Jul 1 – Sep 30 ──────────────────────────────────────────────────────────
@@ -764,7 +775,7 @@ const tabs = [
   { key: "revenue",    label: "Mar 27 – Apr 30",       product: "Launch extended loyalty automations — welcome gift and soft signals. Improve product quality with better information architecture, UX writing and usability improvements.",       gtm: "1. Onboard ≥ 2 pilot properties and instrument success metrics · 2. Start executing the pre-Unfold awareness campaign" },
   { key: "loyalty",    label: "May 1 – May 27 Unfold", product: "End-to-end tested and stable for live demonstration at Unfold",                     gtm: "Pilot flow defined, waitlist campaign launched, and UNFOLD announcement successfully executed" },
   { key: "efficiency", label: "May 28 – Jun 30",       product: "Resolve the infrastructure blocker limiting automation reliability, and expand the connector ecosystem — so hotels can automate more operations and the platform can scale beyond the core team.",                                                                               gtm: "" },
-  { key: "q3",         label: "Jul 1 – Sep 30",        product: "Lower the barrier to automation creation through AI-assisted building (CoPilot), reduce friction with a polished UI, and expand what hotels can automate with more connectors — making Mews Automations accessible to the majority of properties, not just technical power users.",                        gtm: "" },
+  { key: "q3",         label: "Jul 1 – Aug 31",        product: "Lower the barrier to automation creation through AI-assisted building (CoPilot), reduce friction with a polished UI, and expand what hotels can automate with more connectors — making Mews Automations accessible to the majority of properties, not just technical power users.",                        gtm: "" },
 ];
 
 export default function MewsAutomationHubHero() {
