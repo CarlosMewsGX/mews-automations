@@ -283,7 +283,7 @@ const unfoldAutomations = [
     feature: "GA Readiness",
     status: "ON TRACK",
     progress: 30,
-    notes: "Rate limiting: configured on gateway API (100 req/sec per enterprise) and Appmixer components (100 executions/user, FIFO queue with retries at 1, 2, 3 min). Gateway side deployed to production. Component side ready but not yet deployed pending dev tests. Open point: action log needs a rethink — flows can have multiple branches, so a single aggregated status row falls short. A per-step expandable view is being considered. Waiting on Appmixer (Petr) for flow completion notifications and correlationId in /logs. Automatic enable/disable integration: not yet started.",
+    notes: "Rate limiting live on gateway (100 req/sec per enterprise). Appmixer component limits ready but not yet deployed. Open: action log needs a redesign — multi-branch flows can't be shown as a single status row. Per-step expandable view proposed; waiting on Appmixer for technical details. Auto enable/disable: not yet started.",
   },
   {
     tab: "efficiency",
