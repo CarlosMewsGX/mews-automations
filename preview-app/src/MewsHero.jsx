@@ -1270,8 +1270,7 @@ export default function MewsAutomationHubHero() {
               <div style={{ fontSize: "0.65rem", fontWeight: 800, letterSpacing: "0.08em", textTransform: "uppercase", color: T.textDim, marginBottom: "14px" }}>Strategic Signal</div>
               <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
                 {[
-                  { tag: "Signal", color: COLORS.blue, text: <><strong>#1 ask across Strawberry, Stay Collection and YHA:</strong> set-once-deploy-many across properties — the key adoption lever for chains, and a strong signal to shape the Phase 2 roadmap.</> },
-                  { tag: "Signal", color: COLORS.blue, text: "Separately, WestCord is already asking for a conversational CoPilot. Appmixer delivers a beta this week — if quality holds with our native components, we'll add it to the beta for real feedback." },
+                  { tag: "Signal", color: COLORS.pink, text: <><strong>#1 ask across Strawberry, Stay Collection and YHA:</strong> set-once-deploy-many across properties — the key adoption lever for chains, and a strong signal to shape the Phase 2 roadmap.</> },
                 ].map(({ tag, color, text }, i) => (
                   <div key={i} style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
                     <span style={{ flexShrink: 0, fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: COLORS.nearBlack, background: color, borderRadius: "9999px", padding: "2px 9px", marginTop: "1px", minWidth: "84px", textAlign: "center", display: "inline-block" }}>{tag}</span>
