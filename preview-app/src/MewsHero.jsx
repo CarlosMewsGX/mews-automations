@@ -1157,15 +1157,20 @@ export default function MewsAutomationHubHero() {
             <div style={{ display: "flex", gap: "8px", marginBottom: "32px", flexWrap: "wrap" }}>
               {[
                 { key: "2026-06-16", label: "Week of June 16" },
+                { key: "2026-06-23", label: "Week of June 23" },
+                { key: "2026-06-30", label: "Week of June 30" },
+                { key: "2026-07-07", label: "Week of July 7" },
+                { key: "2026-07-14", label: "Week of July 14" },
+                { key: "2026-07-21", label: "Week of July 21" },
               ].map(({ key, label }) => (
                 <button key={key} onClick={() => setActiveWeek(key)}
                   style={{
-                    background: activeWeek === key ? COLORS.chartreuse : "transparent",
-                    color: activeWeek === key ? COLORS.nearBlack : T.textDim,
-                    border: `1px solid ${activeWeek === key ? COLORS.chartreuse : T.borderFaint}`,
+                    background: activeWeek === key ? T.surface : "transparent",
+                    color: activeWeek === key ? T.text : T.textDim,
+                    border: `1px solid ${activeWeek === key ? T.border : T.borderFaint}`,
                     borderRadius: "9999px", padding: "8px 20px",
                     fontSize: "0.85rem", fontWeight: 600, cursor: "pointer",
-                    transition: "all 0.2s",
+                    transition: "all 0.3s ease", outline: "none", whiteSpace: "nowrap",
                   }}>
                   {label}
                 </button>
