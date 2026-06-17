@@ -1034,6 +1034,124 @@ export default function MewsAutomationHubHero() {
             )}
           </div>
 
+          {/* Beta Insights & Metrics */}
+          {activePlan !== "emergency" && <div style={{ paddingTop: "48px", opacity: 0, animation: "fadeSlideUp 0.7s 0.75s forwards" }}>
+            {/* Section label */}
+            <div style={{
+              fontSize: "0.62rem", fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "8px",
+              backgroundImage: `linear-gradient(135deg, ${COLORS.chartreuse} 0%, ${COLORS.blue} 100%)`,
+              WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
+              display: "inline-block",
+            }}>
+              Beta
+            </div>
+            <div style={{ display: "flex", alignItems: "baseline", gap: "16px", marginBottom: "28px", flexWrap: "wrap" }}>
+              <h2 style={{ fontSize: "clamp(1.7rem, 3vw, 2.6rem)", fontWeight: 700, lineHeight: 1.3, letterSpacing: "-0.02em", margin: 0, color: T.textHeading }}>
+                Insights & Metrics
+              </h2>
+              <span style={{ fontSize: "0.72rem", fontWeight: 600, color: T.textDim, border: `1px solid ${T.borderFaint}`, borderRadius: "9999px", padding: "3px 12px" }}>
+                Week of June 16, 2026
+              </span>
+            </div>
+
+            {/* KPI tiles */}
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px", marginBottom: "28px" }}>
+              {[
+                { value: "326", label: "Automations / week", sub: "↑ across 2 live partners", color: COLORS.chartreuse },
+                { value: "100%", label: "Success rate", sub: "0 failed steps", color: COLORS.pink },
+                { value: "5", label: "Beta partners", sub: "2 live · 3 ramping", color: COLORS.blue },
+              ].map(({ value, label, sub, color }) => (
+                <div key={label} style={{ background: T.surface, border: `1px solid ${color}33`, borderRadius: "14px", padding: "20px 24px" }}>
+                  <div style={{ fontSize: "2rem", fontWeight: 800, color, lineHeight: 1, marginBottom: "6px", letterSpacing: "-0.02em" }}>{value}</div>
+                  <div style={{ fontSize: "0.78rem", fontWeight: 600, color: T.text, marginBottom: "2px" }}>{label}</div>
+                  <div style={{ fontSize: "0.7rem", color: T.textDim }}>{sub}</div>
+                </div>
+              ))}
+            </div>
+
+            {/* Cohort cards */}
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginBottom: "28px" }}>
+              {/* Live partners */}
+              {[
+                {
+                  name: "Strawberry",
+                  badge: "Live",
+                  badgeColor: COLORS.chartreuse,
+                  desc: "Room upgrade template running across 2 of 6 properties. Daily loyalty upgrades live on Clarion Draken and Clarion Sign.",
+                  runs: "~40 runs/week",
+                  success: "100%",
+                },
+                {
+                  name: "WestCord",
+                  badge: "Live",
+                  badgeColor: COLORS.chartreuse,
+                  desc: "First flow built independently by their ICT team: when a guest books via Booking.com, Mews creates a staff task and sends a heads-up automatically.",
+                  runs: "~286 runs/week",
+                  success: "100%",
+                },
+              ].map(p => (
+                <div key={p.name} style={{ background: T.surface, border: `1px solid ${p.badgeColor}33`, borderRadius: "14px", padding: "20px 24px" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "10px" }}>
+                    <span style={{ fontWeight: 700, fontSize: "0.95rem", color: T.text }}>{p.name}</span>
+                    <span style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: COLORS.nearBlack, background: p.badgeColor, borderRadius: "9999px", padding: "2px 9px" }}>{p.badge}</span>
+                  </div>
+                  <p style={{ fontSize: "0.78rem", color: T.textDim, lineHeight: 1.6, margin: "0 0 12px" }}>{p.desc}</p>
+                  <div style={{ display: "flex", gap: "16px" }}>
+                    <span style={{ fontSize: "0.72rem", color: T.textMuted }}><span style={{ color: T.text, fontWeight: 600 }}>{p.runs}</span></span>
+                    <span style={{ fontSize: "0.72rem", color: T.textMuted }}>Success <span style={{ color: COLORS.chartreuse, fontWeight: 700 }}>{p.success}</span></span>
+                  </div>
+                </div>
+              ))}
+              {/* Ramping */}
+              <div style={{ background: T.surface, border: `1px solid ${T.borderSubtle}`, borderRadius: "14px", padding: "20px 24px", gridColumn: "1 / -1" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "10px" }}>
+                  <span style={{ fontWeight: 700, fontSize: "0.95rem", color: T.text }}>Ramping — 3 partners</span>
+                  <span style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: T.textDim, background: T.borderSubtle, borderRadius: "9999px", padding: "2px 9px" }}>Enrolled</span>
+                </div>
+                <div style={{ display: "flex", gap: "24px", flexWrap: "wrap" }}>
+                  {[
+                    { name: "Stay Collection", scope: "9 properties" },
+                    { name: "YHA Australia", scope: "~19 properties" },
+                    { name: "Llanoregroup / Cactus Cove Inn", scope: "1 property" },
+                  ].map(p => (
+                    <div key={p.name}>
+                      <div style={{ fontSize: "0.78rem", fontWeight: 600, color: T.text }}>{p.name}</div>
+                      <div style={{ fontSize: "0.7rem", color: T.textDim }}>{p.scope} · First feedback session scheduled</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Key learnings */}
+            <div style={{ background: T.surface, border: `1px solid ${T.borderSubtle}`, borderRadius: "14px", padding: "20px 24px", marginBottom: "16px" }}>
+              <div style={{ fontSize: "0.65rem", fontWeight: 800, letterSpacing: "0.08em", textTransform: "uppercase", color: T.textDim, marginBottom: "14px" }}>Key Learnings</div>
+              <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+                {[
+                  { tag: "Fix", color: COLORS.chartreuse, text: "Upgrade logic: availability calculation defect in the loyalty upgrade flow — fixed, PR ready. Also corrected a secondary bug where availability was only checked for the current day, not the full reservation range." },
+                  { tag: "Feature gap", color: COLORS.orange, text: "Booking-source filtering: arrivals trigger needs an OTA filter. Hotels with OTA-specific contracts (e.g. welcome drink) need to identify arrivals from specific channels and trigger staff tasks accordingly." },
+                  { tag: "Feature gap", color: COLORS.orange, text: "Availability restrictions: multiple partners want Automations to interact with min-night stays, arrival blocks, and closed dates. Not yet supported — discovery sessions planned to scope the solution." },
+                ].map(({ tag, color, text }, i) => (
+                  <div key={i} style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
+                    <span style={{ flexShrink: 0, fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: COLORS.nearBlack, background: color, borderRadius: "9999px", padding: "2px 9px", marginTop: "1px" }}>{tag}</span>
+                    <span style={{ fontSize: "0.78rem", color: T.textMuted, lineHeight: 1.6 }}>{text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Strategic signal */}
+            <div style={{ background: `linear-gradient(135deg, ${COLORS.blue}18 0%, ${COLORS.pink}12 100%)`, border: `1px solid ${COLORS.blue}44`, borderRadius: "14px", padding: "20px 24px" }}>
+              <div style={{ fontSize: "0.65rem", fontWeight: 800, letterSpacing: "0.08em", textTransform: "uppercase", color: COLORS.blue, marginBottom: "10px" }}>Strategic Signal</div>
+              <p style={{ fontSize: "0.82rem", color: T.text, lineHeight: 1.7, margin: "0 0 8px", fontWeight: 500 }}>
+                <strong>#1 ask across Strawberry, Stay Collection and YHA:</strong> set-once-deploy-many across properties — the key adoption lever for chains, and a strong signal to shape the Phase 2 roadmap.
+              </p>
+              <p style={{ fontSize: "0.78rem", color: T.textDim, lineHeight: 1.6, margin: 0 }}>
+                Separately, WestCord is already asking for a conversational CoPilot. Appmixer delivers a beta this week — if quality holds with our native components, we'll add it to the beta for real feedback.
+              </p>
+            </div>
+          </div>}
+
           {/* Timeline heading */}
           <div style={{ paddingTop: "8px", opacity: 0, animation: "fadeSlideUp 0.7s 0.8s forwards" }}>
             <div style={{
