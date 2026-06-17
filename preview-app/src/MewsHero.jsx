@@ -1258,7 +1258,7 @@ export default function MewsAutomationHubHero() {
                   { tag: "Feature gap", color: COLORS.orange, text: "Availability restrictions: multiple partners want Automations to interact with min-night stays, arrival blocks, and closed dates. Not yet supported — discovery sessions planned to scope the solution." },
                 ].map(({ tag, color, text }, i) => (
                   <div key={i} style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
-                    <span style={{ flexShrink: 0, fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: COLORS.nearBlack, background: color, borderRadius: "9999px", padding: "2px 9px", marginTop: "1px" }}>{tag}</span>
+                    <span style={{ flexShrink: 0, fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: COLORS.nearBlack, background: color, borderRadius: "9999px", padding: "2px 9px", marginTop: "1px", minWidth: "84px", textAlign: "center", display: "inline-block" }}>{tag}</span>
                     <span style={{ fontSize: "0.78rem", color: T.textMuted, lineHeight: 1.6 }}>{text}</span>
                   </div>
                 ))}
@@ -1266,14 +1266,19 @@ export default function MewsAutomationHubHero() {
             </div>
 
             {/* Strategic signal */}
-            <div style={{ background: `linear-gradient(135deg, ${COLORS.blue}18 0%, ${COLORS.pink}12 100%)`, border: `1px solid ${COLORS.blue}44`, borderRadius: "14px", padding: "20px 24px" }}>
-              <div style={{ fontSize: "0.65rem", fontWeight: 800, letterSpacing: "0.08em", textTransform: "uppercase", color: COLORS.blue, marginBottom: "10px" }}>Strategic Signal</div>
-              <p style={{ fontSize: "0.82rem", color: T.text, lineHeight: 1.7, margin: "0 0 8px", fontWeight: 500 }}>
-                <strong>#1 ask across Strawberry, Stay Collection and YHA:</strong> set-once-deploy-many across properties — the key adoption lever for chains, and a strong signal to shape the Phase 2 roadmap.
-              </p>
-              <p style={{ fontSize: "0.78rem", color: T.textDim, lineHeight: 1.6, margin: 0 }}>
-                Separately, WestCord is already asking for a conversational CoPilot. Appmixer delivers a beta this week — if quality holds with our native components, we'll add it to the beta for real feedback.
-              </p>
+            <div style={{ background: T.surface, border: `1px solid ${T.borderSubtle}`, borderRadius: "14px", padding: "20px 24px" }}>
+              <div style={{ fontSize: "0.65rem", fontWeight: 800, letterSpacing: "0.08em", textTransform: "uppercase", color: T.textDim, marginBottom: "14px" }}>Strategic Signal</div>
+              <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+                {[
+                  { tag: "Signal", color: COLORS.blue, text: <><strong>#1 ask across Strawberry, Stay Collection and YHA:</strong> set-once-deploy-many across properties — the key adoption lever for chains, and a strong signal to shape the Phase 2 roadmap.</> },
+                  { tag: "Signal", color: COLORS.blue, text: "Separately, WestCord is already asking for a conversational CoPilot. Appmixer delivers a beta this week — if quality holds with our native components, we'll add it to the beta for real feedback." },
+                ].map(({ tag, color, text }, i) => (
+                  <div key={i} style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
+                    <span style={{ flexShrink: 0, fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: COLORS.nearBlack, background: color, borderRadius: "9999px", padding: "2px 9px", marginTop: "1px", minWidth: "84px", textAlign: "center", display: "inline-block" }}>{tag}</span>
+                    <span style={{ fontSize: "0.78rem", color: T.textMuted, lineHeight: 1.6 }}>{text}</span>
+                  </div>
+                ))}
+              </div>
             </div>
 
           </div>
