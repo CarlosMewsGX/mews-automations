@@ -1326,10 +1326,7 @@ export default function MewsAutomationHubHero() {
                     <span style={{ color: COLORS.chartreuse, fontSize: "0.6rem" }}>●</span>
                     Reservation Notification — when a reservation is created, a task is added automatically
                   </div>
-                  <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
-                    <div style={{ fontSize: "0.72rem", color: T.textDim }}>Enabled in <span style={{ color: T.text, fontWeight: 600 }}>8 properties</span></div>
-                    <div style={{ fontSize: "0.72rem", color: T.textDim }}><span style={{ color: T.text, fontWeight: 600 }}>7 more properties</span> enrolled — exploring the tool, no flows enabled yet</div>
-                  </div>
+                  <div style={{ fontSize: "0.72rem", color: T.textDim }}>Enabled in <span style={{ color: T.text, fontWeight: 600 }}>8 properties</span></div>
                 </div>
 
                 <div style={{ background: T.surface, border: `1px solid ${T.borderSubtle}`, borderRadius: "14px", padding: "20px 24px", gridColumn: "1 / -1" }}>
