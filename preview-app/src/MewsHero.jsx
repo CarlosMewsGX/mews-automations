@@ -1193,9 +1193,9 @@ export default function MewsAutomationHubHero() {
             {/* KPI tiles */}
             <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px", marginBottom: "28px" }}>
               {[
-                { value: "326", label: "Automations / week", sub: "↑ across 2 live partners", color: COLORS.chartreuse },
+                { value: "6", label: "Flows enabled", sub: "across 3 live partners", color: COLORS.chartreuse },
                 { value: "100%", label: "Success rate", sub: "0 failed steps", color: COLORS.pink },
-                { value: "5", label: "Beta partners", sub: "2 live · 3 ramping", color: COLORS.blue },
+                { value: "3", label: "Live partners", sub: "16+ properties active", color: COLORS.blue },
               ].map(({ value, label, sub, color }) => (
                 <div key={label} style={{ background: T.surface, border: `1px solid ${color}33`, borderRadius: "14px", padding: "20px 24px" }}>
                   <div style={{ fontSize: "2rem", fontWeight: 800, color, lineHeight: 1, marginBottom: "6px", letterSpacing: "-0.02em" }}>{value}</div>
@@ -1207,40 +1207,66 @@ export default function MewsAutomationHubHero() {
 
             {/* Cohort cards */}
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginBottom: "28px" }}>
-              {[
-                {
-                  name: "Strawberry", badge: "Live", badgeColor: COLORS.chartreuse,
-                  desc: "Room upgrade template running across 2 of 6 properties. Daily loyalty upgrades live on Clarion Draken and Clarion Sign.",
-                  runs: "~40 runs/week", success: "100%",
-                },
-                {
-                  name: "WestCord", badge: "Live", badgeColor: COLORS.chartreuse,
-                  desc: "First flow built independently by their ICT team: when a guest books via Booking.com, Mews creates a staff task and sends a heads-up automatically.",
-                  runs: "~286 runs/week", success: "100%",
-                },
-              ].map(p => (
-                <div key={p.name} style={{ background: T.surface, border: `1px solid ${p.badgeColor}33`, borderRadius: "14px", padding: "20px 24px" }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "10px" }}>
-                    <span style={{ fontWeight: 700, fontSize: "0.95rem", color: T.text }}>{p.name}</span>
-                    <span style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: COLORS.nearBlack, background: p.badgeColor, borderRadius: "9999px", padding: "2px 9px" }}>{p.badge}</span>
-                  </div>
-                  <p style={{ fontSize: "0.78rem", color: T.textDim, lineHeight: 1.6, margin: "0 0 12px" }}>{p.desc}</p>
-                  <div style={{ display: "flex", gap: "16px" }}>
-                    <span style={{ fontSize: "0.72rem", color: T.textMuted }}><span style={{ color: T.text, fontWeight: 600 }}>{p.runs}</span></span>
-                    <span style={{ fontSize: "0.72rem", color: T.textMuted }}>Success <span style={{ color: COLORS.chartreuse, fontWeight: 700 }}>{p.success}</span></span>
-                  </div>
-                </div>
-              ))}
 
-              {/* Ramping partners */}
+              {/* Strawberry */}
+              <div style={{ background: T.surface, border: `1px solid ${COLORS.chartreuse}33`, borderRadius: "14px", padding: "20px 24px" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "10px" }}>
+                  <span style={{ fontWeight: 700, fontSize: "0.95rem", color: T.text }}>Strawberry</span>
+                  <span style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: COLORS.nearBlack, background: COLORS.chartreuse, borderRadius: "9999px", padding: "2px 9px" }}>Live</span>
+                </div>
+                <div style={{ display: "flex", flexDirection: "column", gap: "4px", marginBottom: "12px" }}>
+                  {["Free Bottle of Water", "Upgrade arrival day", "Upgrade 6 days before"].map(f => (
+                    <div key={f} style={{ fontSize: "0.75rem", color: T.textDim, display: "flex", gap: "8px", alignItems: "center" }}>
+                      <span style={{ color: COLORS.chartreuse, fontSize: "0.6rem" }}>●</span>{f}
+                    </div>
+                  ))}
+                </div>
+                <div style={{ fontSize: "0.72rem", color: T.textDim }}>All 3 flows enabled in <span style={{ color: T.text, fontWeight: 600 }}>6 properties</span></div>
+              </div>
+
+              {/* WestCord */}
+              <div style={{ background: T.surface, border: `1px solid ${COLORS.chartreuse}33`, borderRadius: "14px", padding: "20px 24px" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "10px" }}>
+                  <span style={{ fontWeight: 700, fontSize: "0.95rem", color: T.text }}>WestCord</span>
+                  <span style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: COLORS.nearBlack, background: COLORS.chartreuse, borderRadius: "9999px", padding: "2px 9px" }}>Live</span>
+                </div>
+                <div style={{ display: "flex", flexDirection: "column", gap: "4px", marginBottom: "12px" }}>
+                  {[
+                    "Monthly Guest Profiles — 28th of every month, front desk task to download profiles and complete nationalities",
+                    "Booking.com arrival → staff task and heads-up sent automatically",
+                  ].map(f => (
+                    <div key={f} style={{ fontSize: "0.75rem", color: T.textDim, display: "flex", gap: "8px", alignItems: "flex-start" }}>
+                      <span style={{ color: COLORS.chartreuse, fontSize: "0.6rem", marginTop: "4px", flexShrink: 0 }}>●</span>{f}
+                    </div>
+                  ))}
+                </div>
+                <div style={{ fontSize: "0.72rem", color: T.textDim }}>2 flows · <span style={{ color: T.text, fontWeight: 600 }}>2 properties</span></div>
+              </div>
+
+              {/* Stay Collection — now live */}
+              <div style={{ background: T.surface, border: `1px solid ${COLORS.chartreuse}33`, borderRadius: "14px", padding: "20px 24px", gridColumn: "1 / -1" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "10px" }}>
+                  <span style={{ fontWeight: 700, fontSize: "0.95rem", color: T.text }}>Stay Collection</span>
+                  <span style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: COLORS.nearBlack, background: COLORS.chartreuse, borderRadius: "9999px", padding: "2px 9px" }}>Live</span>
+                </div>
+                <div style={{ fontSize: "0.75rem", color: T.textDim, display: "flex", gap: "8px", alignItems: "center", marginBottom: "12px" }}>
+                  <span style={{ color: COLORS.chartreuse, fontSize: "0.6rem" }}>●</span>
+                  Reservation Notification — when a reservation is created, a task is added automatically
+                </div>
+                <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
+                  <div style={{ fontSize: "0.72rem", color: T.textDim }}>Enabled in <span style={{ color: T.text, fontWeight: 600 }}>8 properties</span></div>
+                  <div style={{ fontSize: "0.72rem", color: T.textDim }}><span style={{ color: T.text, fontWeight: 600 }}>7 more properties</span> enrolled — exploring the tool, no flows enabled yet</div>
+                </div>
+              </div>
+
+              {/* Still ramping */}
               <div style={{ background: T.surface, border: `1px solid ${T.borderSubtle}`, borderRadius: "14px", padding: "20px 24px", gridColumn: "1 / -1" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "10px" }}>
-                  <span style={{ fontWeight: 700, fontSize: "0.95rem", color: T.text }}>Ramping — 3 partners</span>
+                  <span style={{ fontWeight: 700, fontSize: "0.95rem", color: T.text }}>Ramping — 2 partners</span>
                   <span style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: T.textDim, background: T.borderSubtle, borderRadius: "9999px", padding: "2px 9px" }}>Enrolled</span>
                 </div>
                 <div style={{ display: "flex", gap: "24px", flexWrap: "wrap" }}>
                   {[
-                    { name: "Stay Collection", scope: "9 properties" },
                     { name: "YHA Australia", scope: "~19 properties" },
                     { name: "Llanoregroup / Cactus Cove Inn", scope: "1 property" },
                   ].map(p => (
@@ -1270,12 +1296,41 @@ export default function MewsAutomationHubHero() {
               </div>
             </div>
 
+            {/* Customer demand insights */}
+            <div style={{ background: T.surface, border: `1px solid ${T.borderSubtle}`, borderRadius: "14px", padding: "20px 24px", marginBottom: "16px" }}>
+              <div style={{ fontSize: "0.65rem", fontWeight: 800, letterSpacing: "0.08em", textTransform: "uppercase", color: T.textDim, marginBottom: "14px" }}>Customer Demand (week of June 23)</div>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "12px", marginBottom: "16px" }}>
+                {[
+                  { value: "5", label: "Customers interviewed", color: COLORS.pink },
+                  { value: "22", label: "Use cases captured", color: COLORS.chartreuse },
+                  { value: "~100%", label: "Covered by roadmap", color: COLORS.blue },
+                ].map(({ value, label, color }) => (
+                  <div key={label} style={{ textAlign: "center", padding: "12px", background: `${color}0A`, borderRadius: "10px", border: `1px solid ${color}22` }}>
+                    <div style={{ fontSize: "1.5rem", fontWeight: 800, color, lineHeight: 1, marginBottom: "4px" }}>{value}</div>
+                    <div style={{ fontSize: "0.7rem", color: T.textDim }}>{label}</div>
+                  </div>
+                ))}
+              </div>
+              <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+                {[
+                  { tag: "Today", color: COLORS.chartreuse, text: "~5 use cases buildable now with shipped components — VIP-arrival task lists, rate-code-filtered tasks, Teams welcome alert on check-in." },
+                  { tag: "Roadmap", color: COLORS.blue, text: "14 use cases unlocked by P1–P4 roadmap items — product upsell flows, weather-driven room moves, space reassignment, bill checks on check-out." },
+                ].map(({ tag, color, text }, i) => (
+                  <div key={i} style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
+                    <span style={{ flexShrink: 0, fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: COLORS.nearBlack, background: color, borderRadius: "9999px", padding: "2px 9px", marginTop: "1px", minWidth: "84px", textAlign: "center", display: "inline-block" }}>{tag}</span>
+                    <span style={{ fontSize: "0.78rem", color: T.textMuted, lineHeight: 1.6 }}>{text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             {/* Strategic signal */}
             <div style={{ background: T.surface, border: `1px solid ${T.borderSubtle}`, borderRadius: "14px", padding: "20px 24px" }}>
               <div style={{ fontSize: "0.65rem", fontWeight: 800, letterSpacing: "0.08em", textTransform: "uppercase", color: T.textDim, marginBottom: "14px" }}>Strategic Signal</div>
               <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
                 {[
-                  { tag: "Signal", color: COLORS.pink, text: <><strong>#1 ask across Strawberry, Stay Collection and YHA:</strong> set-once-deploy-many across properties — the key adoption lever for chains, and a strong signal to shape the Phase 2 roadmap.</> },
+                  { tag: "Signal", color: COLORS.pink, text: <><strong>#1 ask across all partners:</strong> set-once-deploy-many across properties — the key adoption lever for chains, shaping Phase 2 roadmap.</> },
+                  { tag: "Signal", color: COLORS.pink, text: <><strong>Builder seen as too complex</strong> for everyday operators (4 of 5 interviews). Prompt-based automation creation is the #1 thing that would most increase adoption.</> },
                 ].map(({ tag, color, text }, i) => (
                   <div key={i} style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
                     <span style={{ flexShrink: 0, fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: COLORS.nearBlack, background: color, borderRadius: "9999px", padding: "2px 9px", marginTop: "1px", minWidth: "84px", textAlign: "center", display: "inline-block" }}>{tag}</span>
