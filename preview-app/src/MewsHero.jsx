@@ -292,9 +292,9 @@ const unfoldAutomations = [
     goal: "Broaden the range of workflows hotels can build by expanding the connector and component library.",
     successCriteria: "All defined connectors are developed and available in Mews Automations, enabling customers to automate a significantly wider range of hospitality flows.",
     feature: "Connectors",
-    status: "BLOCKED",
-    progress: 0,
-    notes: "All connectors are already defined and shaped. Development is blocked until the internal event source problem is resolved.",
+    status: "ON TRACK",
+    progress: 10,
+    notes: "Running an experiment: can an AI agent autonomously author Appmixer components? Testing with @senem.unal and @jiri.pohanka — selecting simple components, using a Claude skill to go from spec to working code, evaluating quality and speed. 38 components on the roadmap; this experiment will tell us how fast we can move. Results by Friday: feasibility verdict, time estimate per component, blockers, and a recommendation on whether to scale to the full roadmap.",
     url: "https://mews.atlassian.net/wiki/spaces/GX/pages/2097119707/Connectors+Shaping",
   },
   {
