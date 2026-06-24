@@ -1272,10 +1272,9 @@ export default function MewsAutomationHubHero() {
 
             {/* ── WEEK OF JUNE 23 ── */}
             {activeWeek === "2026-06-23" && <>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "16px", marginBottom: "28px" }}>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px", marginBottom: "28px" }}>
                 {[
                   { value: "6", label: "Flows enabled", sub: "across 3 live partners", color: COLORS.chartreuse },
-                  { value: "3", label: "Live partners", sub: "active this week", color: COLORS.blue },
                   { value: "14", label: "Customers", sub: "in closed beta", color: COLORS.pink },
                   { value: "55", label: "Live properties", sub: "with automations enabled", color: COLORS.orange },
                 ].map(({ value, label, sub, color }) => (
@@ -1335,16 +1334,13 @@ export default function MewsAutomationHubHero() {
 
                 <div style={{ background: T.surface, border: `1px solid ${T.borderSubtle}`, borderRadius: "14px", padding: "20px 24px", gridColumn: "1 / -1" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "10px" }}>
-                    <span style={{ fontWeight: 700, fontSize: "0.95rem", color: T.text }}>Ramping — 2 partners</span>
+                    <span style={{ fontWeight: 700, fontSize: "0.95rem", color: T.text }}>Ramping</span>
                     <span style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: T.textDim, background: T.borderSubtle, borderRadius: "9999px", padding: "2px 9px" }}>Enrolled</span>
                   </div>
                   <div style={{ fontSize: "0.72rem", color: COLORS.chartreuse, fontWeight: 600, marginBottom: "10px" }}>+7 more properties added last Friday</div>
-                  <div style={{ display: "flex", gap: "24px", flexWrap: "wrap" }}>
-                    {[{ name: "YHA Australia", scope: "~19 properties" }, { name: "Llanoregroup / Cactus Cove Inn", scope: "1 property" }].map(p => (
-                      <div key={p.name}>
-                        <div style={{ fontSize: "0.78rem", fontWeight: 600, color: T.text }}>{p.name}</div>
-                        <div style={{ fontSize: "0.7rem", color: T.textDim }}>{p.scope} · First feedback session scheduled</div>
-                      </div>
+                  <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
+                    {["Vejora", "Glamp Nusa", "vayagroup", "Schloss & Gut Liebenberg", "vandersterrenhotels", "IMLAUER & BRÄU HOTELS", "Boardwalk Boutique Hotel Aruba", "Hotel GUESTapart", "Cityden"].map(name => (
+                      <span key={name} style={{ fontSize: "0.72rem", fontWeight: 600, color: T.text, background: T.borderSubtle, borderRadius: "9999px", padding: "3px 10px" }}>{name}</span>
                     ))}
                   </div>
                 </div>
@@ -1367,7 +1363,7 @@ export default function MewsAutomationHubHero() {
                 <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
                   {[
                     { tag: "Today", color: COLORS.chartreuse, text: "~5 use cases buildable now with shipped components — VIP-arrival task lists, rate-code-filtered tasks, Teams welcome alert on check-in." },
-                    { tag: "Roadmap", color: COLORS.blue, text: "14 use cases unlocked by P1–P4 roadmap items — product upsell flows, weather-driven room moves, space reassignment, bill checks on check-out." },
+                    { tag: "Roadmap", color: COLORS.pink, text: "14 use cases unlocked by P1–P4 roadmap items — product upsell flows, weather-driven room moves, space reassignment, bill checks on check-out." },
                   ].map(({ tag, color, text }, i) => (
                     <div key={i} style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
                       <span style={{ flexShrink: 0, fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: COLORS.nearBlack, background: color, borderRadius: "9999px", padding: "2px 9px", marginTop: "1px", minWidth: "84px", textAlign: "center", display: "inline-block" }}>{tag}</span>
