@@ -282,8 +282,8 @@ const unfoldAutomations = [
     successCriteria: "Rate limiting deployed and tuned to production baselines. Action log correctly reflects multi-branch flow executions. Automatic enable/disable integration handles production load.",
     feature: "GA Readiness",
     status: "ON TRACK",
-    progress: 30,
-    notes: "GX-28964: Admin token now cached (1 call instead of per-enable). 20s timeout configured via LaunchDarkly. Job processes 500 enterprises/min — fixes TaskCanceledException. Monitor on next launch. · GX-29058: Rate limiting live — 100 req/sec per enterprise (gateway), 100 req/sec per virtual user (Appmixer), 1000 req/min on notification webhook. Values provisional — load testing recommended. Pending: retries in action log (GX-30262), distributed cache for rate limiting (GX-25689).",
+    progress: 80,
+    notes: "Token caching and 20s timeout live — fixes TaskCanceledException at scale. Rate limiting deployed: 100 req/sec per enterprise, 1000 req/min on notifications. Pending: retries in action log (GX-30262), load testing to tune limits.",
   },
   {
     tab: "efficiency",
