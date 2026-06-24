@@ -270,8 +270,8 @@ const unfoldAutomations = [
     successCriteria: "A reliable internal eventing source is in place for PMS trigger events, removing dependency on the Connector integration client webhook and resolving the known delivery, classification, and replica lag issues.",
     feature: "Internal Eventing",
     status: "ON TRACK",
-    progress: 40,
-    notes: "Event-producing part for the guest-profiles service is complete — will now use guest-created events instead of Connector webhooks. The service has also been upgraded to .NET 10 to use the latest event libraries. The event-consuming part (in the automations project) is still in progress.",
+    progress: 70,
+    notes: "Guest-related triggers in testing. Reservation-related triggers in progress — waiting on @vitor.mello to complete the sending side.",
     url: "https://mews.atlassian.net/wiki/spaces/OPS/pages/2040693884/Tech+Debt+Internal+event+source+for+PMS+trigger+events",
   },
   {
@@ -283,7 +283,7 @@ const unfoldAutomations = [
     feature: "GA Readiness",
     status: "ON TRACK",
     progress: 30,
-    notes: "Rate limiting live on gateway (100 req/sec per enterprise). Appmixer component limits ready but not yet deployed. Open: action log needs a redesign — multi-branch flows can't be shown as a single status row. Per-step expandable view proposed; waiting on Appmixer for technical details. Auto enable/disable: not yet started.",
+    notes: "GX-28964: Admin token now cached (1 call instead of per-enable). 20s timeout configured via LaunchDarkly. Job processes 500 enterprises/min — fixes TaskCanceledException. Monitor on next launch. · GX-29058: Rate limiting live — 100 req/sec per enterprise (gateway), 100 req/sec per virtual user (Appmixer), 1000 req/min on notification webhook. Values provisional — load testing recommended. Pending: retries in action log (GX-30262), distributed cache for rate limiting (GX-25689).",
   },
   {
     tab: "efficiency",

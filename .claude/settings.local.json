@@ -47,7 +47,15 @@
       "Bash(pnpm run *)",
       "Bash(npx tsc *)",
       "Bash(./node_modules/.bin/tsc --noEmit)",
-      "mcp__5467388b-5c64-494f-8554-a7b1ef1ec661__slack_read_thread"
+      "mcp__5467388b-5c64-494f-8554-a7b1ef1ec661__slack_read_thread",
+      "Bash(rm \"/tmp/mews-automations-customer/src/app/components/ExtendingSection.tsx\")",
+      "Bash(cat \"/tmp/mews-automations-customer/vite.config.ts\")",
+      "Bash(gh workflow *)",
+      "Bash(rm /tmp/mews-automations-customer/pnpm-lock.yaml && echo \"deleted\")",
+      "Bash(ls /tmp/mews-automations-customer/src/app/App.tsx 2>/dev/null || echo \"not found\" *)",
+      "Bash(xargs -I{} dirname {})",
+      "Bash(git -C /tmp/mews-automations-customer log --oneline -5)",
+      "Bash(git clone *)"
     ]
   }
 }
