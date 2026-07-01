@@ -343,7 +343,7 @@ const unfoldAutomations = [
     feature: "Connectors",
     status: "ON TRACK",
     progress: 10,
-    notes: "Agent currently creates READ components only (~16 in scope; ~24 write components still manual). Writing code is fast — ~20–30 min/component — but the real cost is in dependencies: (1) Translations: new text keys require globalization repo + translations team; unblock proposed: agent generates translations itself, team adapts after the fact. (2) Service readiness: first component per service takes 1–5 days for one-time setup (platform + S2S auth); subsequent components on the same service are fast. (3) Manual testing + PR merge still required. Experiment running: a focused 'component day' starting with Guest Profiles to get a real weekly rate. Target: walk into product review next Wednesday with actual numbers, not estimates.",
+    notes: "Agent creates READ components only (~16 in scope). Code writing is fast (~20–30 min) but real cost is in dependencies: translations require globalization repo handoff, first component per service needs 1–5 days of one-time setup, and manual testing + PR merge still required. Running a 'component day' starting with Guest Profiles to get a real weekly rate — bringing actual numbers to product review next Wednesday.",
   },
   {
     tab: "q3",
@@ -790,7 +790,7 @@ const tabs = [
 ];
 
 export default function MewsAutomationHubHero() {
-  const [activeTab, setActiveTab] = useState("revenue");
+  const [activeTab, setActiveTab] = useState("q3");
   const [activeLevel, setActiveLevel] = useState(4);
   const [nextLevelOpen, setNextLevelOpen] = useState(false);
   const [activePlan, setActivePlan] = useState("unfold");
