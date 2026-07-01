@@ -337,6 +337,17 @@ const unfoldAutomations = [
   {
     tab: "q3",
     type: "product",
+    title: "Components Creator Agent",
+    goal: "Use a Claude-powered AI agent to autonomously author Appmixer components — reducing the time and cost of building the full component roadmap.",
+    successCriteria: "Agent can reliably produce working read components from spec. Weekly output rate established from real experiment data. Dependencies (translations, service setup) have a clear mitigation path.",
+    feature: "Connectors",
+    status: "ON TRACK",
+    progress: 10,
+    notes: "Agent currently creates READ components only (~16 in scope; ~24 write components still manual). Writing code is fast — ~20–30 min/component — but the real cost is in dependencies: (1) Translations: new text keys require globalization repo + translations team; unblock proposed: agent generates translations itself, team adapts after the fact. (2) Service readiness: first component per service takes 1–5 days for one-time setup (platform + S2S auth); subsequent components on the same service are fast. (3) Manual testing + PR merge still required. Experiment running: a focused 'component day' starting with Guest Profiles to get a real weekly rate. Target: walk into product review next Wednesday with actual numbers, not estimates.",
+  },
+  {
+    tab: "q3",
+    type: "product",
     title: "New connectors and components",
     goal: "Broaden the range of workflows hotels can build by expanding the connector and component library.",
     successCriteria: "All defined connectors are developed and available in Mews Automations, enabling customers to automate a significantly wider range of hospitality flows.",
