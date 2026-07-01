@@ -362,9 +362,9 @@ const unfoldAutomations = [
     goal: "Evaluate Appmixer's newly released CoPilot version by deploying it to a testing environment with our native components to assess reliability and quality before adopting it.",
     successCriteria: "CoPilot is running in a test environment with Mews native components. Testing flows validated. Quality verdict reached — adopt or escalate blockers.",
     feature: "CoPilot",
-    status: "ON TRACK",
+    status: "BLOCKED",
     progress: 0,
-    notes: "Deploying Appmixer's new CoPilot release to a testing environment with our native components. Trade-off: using their mixed UI instead of ours to move faster and focus evaluation on whether CoPilot works reliably with native components and testing flows. If quality holds, we adopt the new version.",
+    notes: "Blocked until Components Creator Agent experiment and New Guest Messenger Entry Point are complete. Once unblocked: deploy Appmixer's new CoPilot release to a testing environment with native components, using their mixed UI to evaluate reliability. If quality holds, adopt the new version.",
   },
   {
     tab: "q3",
